@@ -219,5 +219,5 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-dev/data/*
-!dev/data/.gitkeep
+**/data/**
+!**/data/.gitkeep
