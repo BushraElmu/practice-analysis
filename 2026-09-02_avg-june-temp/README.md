@@ -1,4 +1,4 @@
-# Average June Temperature over the Last Three Years
+# Practice 1: Average June Temperature, 2024-2026
 
 Calculate and visualize Calgary's average June temperature for 2024–2026 using hourly ERA5 weather data.
 
