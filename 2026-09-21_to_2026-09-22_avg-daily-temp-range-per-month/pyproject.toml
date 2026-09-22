@@ -1,0 +1,15 @@
+[project]
+name = "2026-09-21-to-2026-09-22-avg-daily-temp-range-per-month"
+version = "0.1.0"
+requires-python = ">=3.14.4"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.3",
+    "pandas>=3.0.6",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.3.0",
+]
