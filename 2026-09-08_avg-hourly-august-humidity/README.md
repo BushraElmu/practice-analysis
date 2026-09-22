@@ -1,4 +1,4 @@
-# Practice 5: Average Relative Humidity by Hour of Day, August 2025
+# Practice 5: Average Relative Humidity by Hour of Day, August 2025 
 
 Calculate and visualize Calgary's average relative humidity for each hour of the day during August 2025.
 
