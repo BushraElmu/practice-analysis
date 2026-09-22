@@ -96,6 +96,6 @@ See the individual exercise README for attribution and exercise-specific details
 
 ## License
 
-Code in this repository is licensed under the Apache License 2.0.
+Code in this repository is licensed under the [Apache License 2.0](LICENSE).
 
 Data retain their respective source licenses and attribution requirements.
