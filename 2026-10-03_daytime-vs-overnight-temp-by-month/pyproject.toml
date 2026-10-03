@@ -1,0 +1,14 @@
+[project]
+name = "2026-10-03-daytime-vs-overnight-temp-by-month"
+version = "0.1.0"
+requires-python = ">=3.14.4"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
