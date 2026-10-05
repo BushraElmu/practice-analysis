@@ -71,6 +71,7 @@ Generated data are not committed; final analytical outputs are.
 | 4 | 7-Day Rolling Average Temperature, Final 90 Days |
 | 5 | Average Relative Humidity by Hour of Day, August 2025 |
 | 6 | Average Daily Temperature Range by Month, 2025 |
+| 7 | Daytime vs Overnight Temperature by Month, Summer 2025 |
 
 ## Reproducing an Exercise
 
