@@ -63,15 +63,16 @@ Generated data are not committed; final analytical outputs are.
 
 ## Practices
 
-| # | Exercise |
-|---|---|
-| 1 | Average June Temperature, 2024–2026 |
-| 2 | Average May Temperature, 2024–2026 |
-| 3 | Maximum April Temperature, 2024–2026 |
-| 4 | 7-Day Rolling Average Temperature, Final 90 Days |
-| 5 | Average Relative Humidity by Hour of Day, August 2025 |
-| 6 | Average Daily Temperature Range by Month, 2025 |
-| 7 | Daytime vs Overnight Temperature by Month, Summer 2025 |
+| # | Exercise | Type |
+|---|---|---|
+| 1 | Average June Temperature, 2024–2026 | CSV |
+| 2 | Average May Temperature, 2024–2026 | CSV |
+| 3 | Maximum April Temperature, 2024–2026 | CSV |
+| 4 | 7-Day Rolling Average Temperature, Final 90 Days | CSV |
+| 5 | Average Relative Humidity by Hour of Day, August 2025 | CSV |
+| 6 | Average Daily Temperature Range by Month, 2025 | CSV |
+| 7 | Daytime vs Overnight Temperature by Month, Summer 2025 | CSV |
+| 8 | Monthly Precipitation, 2024 vs 2025 | SQL |
 
 ## Reproducing an Exercise
 
