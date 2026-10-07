@@ -73,6 +73,7 @@ Generated data are not committed; final analytical outputs are.
 | 6 | Average Daily Temperature Range by Month, 2025 | CSV |
 | 7 | Daytime vs Overnight Temperature by Month, Summer 2025 | CSV |
 | 8 | Monthly Precipitation, 2024 vs 2025 | SQL |
+| 9 | Precipitation Days by Month, 2025 | SQL |
 
 ## Reproducing an Exercise
 
