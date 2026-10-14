@@ -75,6 +75,7 @@ Generated data are not committed; final analytical outputs are.
 | 8 | Monthly Precipitation, 2024 vs 2025 | SQL |
 | 9 | Precipitation Days by Month, 2025 | SQL |
 | 10 | Largest Daily Temperature Swings, 2025 | JSON |
+| 11 | January vs July Temperature Distribution, 2025 | Parquet |
 
 ## Reproducing an Exercise
 
