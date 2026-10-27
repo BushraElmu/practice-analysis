@@ -79,6 +79,7 @@ Generated data are not committed; final analytical outputs are.
 | 12 | Trailing 7-Day Precipitation Total, Spring–Summer 2026 | CSV |
 | 13 | Cumulative Precipitation, 2024 vs 2025 | SQL |
 | 14 | Temperature vs Relative Humidity, August 2026 | CSV |
+| 15 | Hot and Dry Daytime Hours, Summer 2026 | Parquet |
 
 ## Reproducing an Exercise
 
