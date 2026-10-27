@@ -50,7 +50,7 @@ For each month from June through August 2026, show the percentage of Calgary day
 
 #### Visualization
 
-![Monthly share of hot-and-dry daytime hours, Calgary, summer 2026]](outputs/dotplot_hot-dry-daytime-hours-summer-2026.svg)
+![Monthly share of hot-and-dry daytime hours, Calgary, summer 2026](outputs/dotplot_hot-dry-daytime-hours-summer-2026.svg)
 
 The share of **eligible daytime hours** that were both above 25°C and below 40% relative humidity differed considerably between the three months: **0.3% in June, 34.2% in July, and 13.0% in August**. July had the highest qualifying share, while June had almost none.
 
