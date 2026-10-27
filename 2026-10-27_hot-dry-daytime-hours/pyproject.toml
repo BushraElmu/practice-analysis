@@ -1,0 +1,15 @@
+[project]
+name = "2026-10-27-hot-dry-daytime-hours"
+version = "0.1.0"
+requires-python = ">=3.14.4"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "pandas>=3.1.0",
+    "pyarrow>=26.0.0",
+    "requests>=2.34.2",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+]
