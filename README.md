@@ -63,7 +63,7 @@ Generated data are not committed; final analytical outputs are.
 
 ## Practices
 
-| # | Exercise | Type |
+| # | Exercise | Type | 
 |---|---|---|
 | 1 | Average June Temperature, 2024–2026 | CSV |
 | 2 | Average May Temperature, 2024–2026 | CSV |
@@ -80,6 +80,7 @@ Generated data are not committed; final analytical outputs are.
 | 13 | Cumulative Precipitation, 2024 vs 2025 | SQL |
 | 14 | Temperature vs Relative Humidity, August 2026 | CSV |
 | 15 | Hot and Dry Daytime Hours, Summer 2026 | Parquet |
+| 16 | Historical Temperature Anomalies, 2025 | JSON |
 
 ## Reproducing an Exercise
 
