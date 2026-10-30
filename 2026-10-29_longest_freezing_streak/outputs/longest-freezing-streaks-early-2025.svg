@@ -1,0 +1,2606 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="731.16pt" height="448.986pt" viewBox="0 0 731.16 448.986" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-29T20:21:27.404964</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 448.986 
+L 731.16 448.986 
+L 731.16 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 90.36 390.96 
+L 723.96 390.96 
+L 723.96 49.32 
+L 90.36 49.32 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 90.36 390.96 
+L 90.36 49.32 
+" clip-path="url(#p989bc92c68)" style="fill: none; stroke: #b3b3b3; stroke-opacity: 0.35; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2"/>
+     <g id="text_1">
+      <!-- 0 -->
+      <g style="fill: #777777" transform="translate(87.6825 403.46) scale(0.09 -0.09)">
+       <defs>
+        <path id="AvenirNext-Medium-13" d="M 1907 4646 
+Q 2310 4646 2601 4460 
+Q 2893 4275 3081 3952 
+Q 3270 3629 3360 3193 
+Q 3450 2758 3450 2266 
+Q 3450 1766 3360 1334 
+Q 3270 902 3081 579 
+Q 2893 256 2601 70 
+Q 2310 -115 1907 -115 
+Q 1504 -115 1209 70 
+Q 915 256 726 579 
+Q 538 902 448 1334 
+Q 358 1766 358 2266 
+Q 358 2758 448 3193 
+Q 538 3629 726 3952 
+Q 915 4275 1209 4460 
+Q 1504 4646 1907 4646 
+z
+M 1907 4128 
+Q 1626 4128 1446 3945 
+Q 1267 3763 1168 3484 
+Q 1069 3206 1030 2880 
+Q 992 2554 992 2266 
+Q 992 1978 1030 1651 
+Q 1069 1325 1168 1049 
+Q 1267 774 1446 592 
+Q 1626 410 1907 410 
+Q 2182 410 2358 592 
+Q 2534 774 2636 1049 
+Q 2739 1325 2777 1651 
+Q 2816 1978 2816 2266 
+Q 2816 2554 2777 2880 
+Q 2739 3206 2636 3484 
+Q 2534 3763 2358 3945 
+Q 2182 4128 1907 4128 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-13"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 212.393898 390.96 
+L 212.393898 49.32 
+" clip-path="url(#p989bc92c68)" style="fill: none; stroke: #b3b3b3; stroke-opacity: 0.35; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4"/>
+     <g id="text_2">
+      <!-- 5 -->
+      <g style="fill: #777777" transform="translate(209.716398 403.46) scale(0.09 -0.09)">
+       <defs>
+        <path id="AvenirNext-Medium-18" d="M 3136 3981 
+L 1267 3981 
+L 1229 2790 
+Q 1357 2835 1513 2854 
+Q 1670 2874 1811 2874 
+Q 2138 2874 2416 2774 
+Q 2694 2675 2896 2489 
+Q 3098 2304 3213 2038 
+Q 3328 1773 3328 1446 
+Q 3328 1088 3206 800 
+Q 3085 512 2873 310 
+Q 2662 109 2374 -3 
+Q 2086 -115 1747 -115 
+Q 1216 -115 851 131 
+Q 486 378 301 794 
+L 864 1018 
+Q 973 742 1206 576 
+Q 1440 410 1747 410 
+Q 1946 410 2118 480 
+Q 2291 550 2419 678 
+Q 2547 806 2620 985 
+Q 2694 1165 2694 1382 
+Q 2694 1638 2608 1827 
+Q 2522 2016 2374 2137 
+Q 2227 2259 2035 2316 
+Q 1843 2374 1632 2374 
+Q 1376 2374 1107 2304 
+Q 838 2234 627 2125 
+L 691 4531 
+L 3136 4531 
+L 3136 3981 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-18"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 334.427797 390.96 
+L 334.427797 49.32 
+" clip-path="url(#p989bc92c68)" style="fill: none; stroke: #b3b3b3; stroke-opacity: 0.35; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6"/>
+     <g id="text_3">
+      <!-- 10 -->
+      <g style="fill: #777777" transform="translate(329.072797 403.46) scale(0.09 -0.09)">
+       <defs>
+        <path id="AvenirNext-Medium-14" d="M 2426 0 
+L 1805 0 
+L 1805 3776 
+L 947 3059 
+L 582 3488 
+L 1869 4531 
+L 2426 4531 
+L 2426 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-14"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(59.5 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 456.461695 390.96 
+L 456.461695 49.32 
+" clip-path="url(#p989bc92c68)" style="fill: none; stroke: #b3b3b3; stroke-opacity: 0.35; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_4">
+      <!-- 15 -->
+      <g style="fill: #777777" transform="translate(451.106695 403.46) scale(0.09 -0.09)">
+       <use xlink:href="#AvenirNext-Medium-14"/>
+       <use xlink:href="#AvenirNext-Medium-18" transform="translate(59.5 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 578.495593 390.96 
+L 578.495593 49.32 
+" clip-path="url(#p989bc92c68)" style="fill: none; stroke: #b3b3b3; stroke-opacity: 0.35; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_5">
+      <!-- 20 -->
+      <g style="fill: #777777" transform="translate(573.140593 403.46) scale(0.09 -0.09)">
+       <defs>
+        <path id="AvenirNext-Medium-15" d="M 3341 0 
+L 384 0 
+L 384 595 
+L 2189 2387 
+Q 2394 2598 2541 2828 
+Q 2688 3059 2688 3347 
+Q 2688 3526 2624 3670 
+Q 2560 3814 2451 3916 
+Q 2342 4019 2195 4073 
+Q 2048 4128 1882 4128 
+Q 1536 4128 1312 3907 
+Q 1088 3686 1030 3341 
+L 422 3443 
+Q 461 3699 585 3920 
+Q 710 4141 902 4304 
+Q 1094 4467 1347 4556 
+Q 1600 4646 1888 4646 
+Q 2170 4646 2429 4563 
+Q 2688 4480 2886 4320 
+Q 3085 4160 3203 3917 
+Q 3322 3674 3322 3360 
+Q 3322 3142 3264 2956 
+Q 3206 2771 3107 2604 
+Q 3008 2438 2873 2288 
+Q 2739 2138 2592 1990 
+L 1120 557 
+L 3341 557 
+L 3341 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-15"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(59.5 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 700.529492 390.96 
+L 700.529492 49.32 
+" clip-path="url(#p989bc92c68)" style="fill: none; stroke: #b3b3b3; stroke-opacity: 0.35; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_6">
+      <!-- 25 -->
+      <g style="fill: #777777" transform="translate(695.174492 403.46) scale(0.09 -0.09)">
+       <use xlink:href="#AvenirNext-Medium-15"/>
+       <use xlink:href="#AvenirNext-Medium-18" transform="translate(59.5 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_7">
+     <!-- FREEZING STREAK LENGTH (days) -->
+     <g style="fill: #777777" transform="translate(90.36 421.754) scale(0.11 -0.11)">
+      <defs>
+       <path id="AvenirNext-Medium-29" d="M 1184 0 
+L 550 0 
+L 550 4531 
+L 3379 4531 
+L 3379 3974 
+L 1184 3974 
+L 1184 2566 
+L 3238 2566 
+L 3238 2022 
+L 1184 2022 
+L 1184 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-35" d="M 1184 0 
+L 550 0 
+L 550 4531 
+L 2003 4531 
+Q 2330 4531 2624 4464 
+Q 2918 4397 3139 4249 
+Q 3360 4102 3488 3862 
+Q 3616 3622 3616 3277 
+Q 3616 2778 3309 2470 
+Q 3002 2163 2515 2080 
+L 3782 0 
+L 3014 0 
+L 1862 2016 
+L 1184 2016 
+L 1184 0 
+z
+M 1184 2547 
+L 1914 2547 
+Q 2138 2547 2330 2585 
+Q 2522 2624 2666 2710 
+Q 2810 2797 2893 2934 
+Q 2976 3072 2976 3277 
+Q 2976 3482 2893 3619 
+Q 2810 3757 2672 3840 
+Q 2534 3923 2348 3958 
+Q 2163 3994 1958 3994 
+L 1184 3994 
+L 1184 2547 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-28" d="M 1184 563 
+L 3552 563 
+L 3552 0 
+L 550 0 
+L 550 4531 
+L 3456 4531 
+L 3456 3974 
+L 1184 3974 
+L 1184 2618 
+L 3322 2618 
+L 3322 2074 
+L 1184 2074 
+L 1184 563 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-3d" d="M 3539 3974 
+L 979 563 
+L 3578 563 
+L 3578 0 
+L 211 0 
+L 211 557 
+L 2765 3974 
+L 262 3974 
+L 262 4531 
+L 3539 4531 
+L 3539 3974 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-2c" d="M 1184 0 
+L 550 0 
+L 550 4531 
+L 1184 4531 
+L 1184 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-31" d="M 3744 909 
+L 3757 909 
+L 3757 4531 
+L 4390 4531 
+L 4390 0 
+L 3590 0 
+L 1197 3699 
+L 1184 3699 
+L 1184 0 
+L 550 0 
+L 550 4531 
+L 1376 4531 
+L 3744 909 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-2a" d="M 3968 3597 
+Q 3763 3821 3446 3955 
+Q 3130 4090 2739 4090 
+Q 2342 4090 2022 3946 
+Q 1702 3802 1478 3552 
+Q 1254 3302 1132 2972 
+Q 1011 2643 1011 2272 
+Q 1011 1894 1132 1561 
+Q 1254 1229 1478 982 
+Q 1702 736 2028 595 
+Q 2355 454 2758 454 
+Q 3078 454 3347 512 
+Q 3616 570 3814 678 
+L 3814 1939 
+L 2810 1939 
+L 2810 2477 
+L 4442 2477 
+L 4442 282 
+Q 4083 90 3660 -12 
+Q 3238 -115 2739 -115 
+Q 2208 -115 1763 61 
+Q 1318 237 998 553 
+Q 678 870 499 1308 
+Q 320 1747 320 2272 
+Q 320 2803 502 3241 
+Q 685 3680 1008 3990 
+Q 1331 4301 1772 4473 
+Q 2214 4646 2733 4646 
+Q 3277 4646 3702 4486 
+Q 4128 4326 4410 4058 
+L 3968 3597 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-3" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-36" d="M 2803 3693 
+Q 2669 3878 2438 3996 
+Q 2208 4115 1920 4115 
+Q 1766 4115 1609 4073 
+Q 1453 4032 1325 3939 
+Q 1197 3846 1117 3708 
+Q 1037 3571 1037 3379 
+Q 1037 3194 1110 3069 
+Q 1184 2944 1309 2857 
+Q 1434 2771 1603 2710 
+Q 1773 2650 1965 2586 
+Q 2195 2515 2432 2425 
+Q 2669 2336 2861 2189 
+Q 3053 2042 3174 1821 
+Q 3296 1600 3296 1261 
+Q 3296 909 3165 649 
+Q 3034 390 2816 220 
+Q 2598 51 2313 -32 
+Q 2029 -115 1728 -115 
+Q 1299 -115 899 51 
+Q 499 218 237 544 
+L 730 960 
+Q 890 723 1158 576 
+Q 1427 429 1741 429 
+Q 1901 429 2061 473 
+Q 2221 518 2352 614 
+Q 2483 710 2566 854 
+Q 2650 998 2650 1203 
+Q 2650 1408 2563 1545 
+Q 2477 1683 2329 1779 
+Q 2182 1875 1987 1942 
+Q 1792 2010 1574 2080 
+Q 1357 2144 1145 2237 
+Q 934 2330 768 2474 
+Q 602 2618 499 2829 
+Q 397 3040 397 3354 
+Q 397 3693 534 3936 
+Q 672 4179 893 4339 
+Q 1114 4499 1392 4572 
+Q 1670 4646 1952 4646 
+Q 2349 4646 2694 4505 
+Q 3040 4365 3251 4128 
+L 2803 3693 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-37" d="M 2138 0 
+L 1504 0 
+L 1504 3974 
+L 51 3974 
+L 51 4531 
+L 3590 4531 
+L 3590 3974 
+L 2138 3974 
+L 2138 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-24" d="M 736 0 
+L 32 0 
+L 1997 4531 
+L 2573 4531 
+L 4518 0 
+L 3802 0 
+L 3341 1114 
+L 1190 1114 
+L 736 0 
+z
+M 1414 1670 
+L 3110 1670 
+L 2266 3795 
+L 1414 1670 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-2e" d="M 1184 2534 
+L 1197 2534 
+L 3219 4531 
+L 4096 4531 
+L 1894 2458 
+L 4230 0 
+L 3322 0 
+L 1197 2342 
+L 1184 2342 
+L 1184 0 
+L 550 0 
+L 550 4531 
+L 1184 4531 
+L 1184 2534 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-2f" d="M 1184 563 
+L 3206 563 
+L 3206 0 
+L 550 0 
+L 550 4531 
+L 1184 4531 
+L 1184 563 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-2b" d="M 550 4531 
+L 1184 4531 
+L 1184 2637 
+L 3475 2637 
+L 3475 4531 
+L 4115 4531 
+L 4115 0 
+L 3475 0 
+L 3475 2074 
+L 1184 2074 
+L 1184 0 
+L 550 0 
+L 550 4531 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-b" d="M 762 1843 
+Q 762 1139 986 470 
+Q 1210 -198 1587 -723 
+L 1152 -1005 
+Q 730 -435 474 301 
+Q 218 1037 218 1843 
+Q 218 2650 474 3386 
+Q 730 4122 1152 4691 
+L 1587 4410 
+Q 1210 3885 986 3216 
+Q 762 2547 762 1843 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-47" d="M 2938 480 
+Q 2765 205 2467 61 
+Q 2170 -83 1843 -83 
+Q 1491 -83 1209 41 
+Q 928 166 729 384 
+Q 531 602 422 896 
+Q 314 1190 314 1523 
+Q 314 1856 422 2147 
+Q 531 2438 732 2656 
+Q 934 2874 1216 2995 
+Q 1498 3117 1837 3117 
+Q 2208 3117 2483 2960 
+Q 2758 2803 2918 2579 
+L 2931 2579 
+L 2931 4838 
+L 3533 4838 
+L 3533 0 
+L 2950 0 
+L 2950 480 
+L 2938 480 
+z
+M 941 1523 
+Q 941 1312 1005 1113 
+Q 1069 915 1197 761 
+Q 1325 608 1510 515 
+Q 1696 422 1946 422 
+Q 2176 422 2365 512 
+Q 2554 602 2688 752 
+Q 2822 902 2896 1100 
+Q 2970 1299 2970 1517 
+Q 2970 1734 2896 1932 
+Q 2822 2131 2688 2284 
+Q 2554 2438 2365 2528 
+Q 2176 2618 1946 2618 
+Q 1696 2618 1510 2528 
+Q 1325 2438 1197 2284 
+Q 1069 2131 1005 1932 
+Q 941 1734 941 1523 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-44" d="M 2406 1965 
+Q 2406 2304 2201 2467 
+Q 1997 2630 1658 2630 
+Q 1402 2630 1174 2531 
+Q 947 2432 794 2278 
+L 474 2662 
+Q 698 2874 1021 2995 
+Q 1344 3117 1715 3117 
+Q 2042 3117 2282 3024 
+Q 2522 2931 2675 2771 
+Q 2829 2611 2905 2393 
+Q 2982 2176 2982 1926 
+L 2982 602 
+Q 2982 448 2992 278 
+Q 3002 109 3027 0 
+L 2483 0 
+Q 2432 218 2432 435 
+L 2413 435 
+Q 2246 192 1993 57 
+Q 1741 -77 1395 -77 
+Q 1216 -77 1021 -29 
+Q 826 19 666 128 
+Q 506 237 400 416 
+Q 294 595 294 858 
+Q 294 1203 480 1404 
+Q 666 1606 966 1712 
+Q 1267 1818 1644 1850 
+Q 2022 1882 2406 1882 
+L 2406 1965 
+z
+M 2259 1446 
+Q 2035 1446 1795 1427 
+Q 1555 1408 1360 1350 
+Q 1165 1293 1037 1177 
+Q 909 1062 909 870 
+Q 909 736 963 646 
+Q 1018 557 1107 499 
+Q 1197 442 1305 419 
+Q 1414 397 1530 397 
+Q 1952 397 2179 649 
+Q 2406 902 2406 1286 
+L 2406 1446 
+L 2259 1446 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-5c" d="M 1670 653 
+L 1683 653 
+L 2522 3034 
+L 3162 3034 
+L 1690 -717 
+Q 1613 -909 1523 -1059 
+Q 1434 -1210 1312 -1315 
+Q 1190 -1421 1027 -1478 
+Q 864 -1536 640 -1536 
+Q 544 -1536 445 -1526 
+Q 346 -1517 243 -1491 
+L 301 -960 
+Q 454 -1011 602 -1011 
+Q 838 -1011 953 -880 
+Q 1069 -749 1165 -506 
+L 1357 0 
+L 58 3034 
+L 730 3034 
+L 1670 653 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-56" d="M 2157 2266 
+Q 2054 2432 1868 2537 
+Q 1683 2643 1453 2643 
+Q 1350 2643 1248 2620 
+Q 1146 2598 1066 2550 
+Q 986 2502 938 2428 
+Q 890 2355 890 2246 
+Q 890 2054 1062 1961 
+Q 1235 1869 1581 1792 
+Q 1798 1741 1984 1670 
+Q 2170 1600 2307 1494 
+Q 2445 1389 2521 1241 
+Q 2598 1094 2598 896 
+Q 2598 627 2496 441 
+Q 2394 256 2224 137 
+Q 2054 19 1836 -32 
+Q 1619 -83 1389 -83 
+Q 1043 -83 713 51 
+Q 384 186 166 461 
+L 595 826 
+Q 717 646 931 524 
+Q 1146 403 1402 403 
+Q 1517 403 1622 425 
+Q 1728 448 1814 499 
+Q 1901 550 1952 633 
+Q 2003 717 2003 845 
+Q 2003 1056 1801 1158 
+Q 1600 1261 1210 1350 
+Q 1056 1389 899 1443 
+Q 742 1498 614 1594 
+Q 486 1690 406 1834 
+Q 326 1978 326 2189 
+Q 326 2432 425 2608 
+Q 525 2784 685 2896 
+Q 845 3008 1049 3062 
+Q 1254 3117 1472 3117 
+Q 1798 3117 2102 2989 
+Q 2406 2861 2573 2618 
+L 2157 2266 
+z
+" transform="scale(0.015625)"/>
+       <path id="AvenirNext-Medium-c" d="M 1254 1843 
+Q 1254 2547 1030 3216 
+Q 806 3885 429 4410 
+L 864 4691 
+Q 1286 4122 1542 3386 
+Q 1798 2650 1798 1843 
+Q 1798 1037 1542 301 
+Q 1286 -435 864 -1005 
+L 429 -723 
+Q 806 -198 1030 470 
+Q 1254 1139 1254 1843 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#AvenirNext-Medium-29"/>
+      <use xlink:href="#AvenirNext-Medium-35" transform="translate(56.796875 0)"/>
+      <use xlink:href="#AvenirNext-Medium-28" transform="translate(118.203125 0)"/>
+      <use xlink:href="#AvenirNext-Medium-28" transform="translate(178.296875 0)"/>
+      <use xlink:href="#AvenirNext-Medium-3d" transform="translate(238.390625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-2c" transform="translate(297.59375 0)"/>
+      <use xlink:href="#AvenirNext-Medium-31" transform="translate(324.6875 0)"/>
+      <use xlink:href="#AvenirNext-Medium-2a" transform="translate(401.890625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-3" transform="translate(479.6875 0)"/>
+      <use xlink:href="#AvenirNext-Medium-36" transform="translate(504.6875 0)"/>
+      <use xlink:href="#AvenirNext-Medium-37" transform="translate(560 0)"/>
+      <use xlink:href="#AvenirNext-Medium-35" transform="translate(616.90625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-28" transform="translate(678.3125 0)"/>
+      <use xlink:href="#AvenirNext-Medium-24" transform="translate(738.40625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-2e" transform="translate(809.5 0)"/>
+      <use xlink:href="#AvenirNext-Medium-3" transform="translate(874.203125 0)"/>
+      <use xlink:href="#AvenirNext-Medium-2f" transform="translate(899.203125 0)"/>
+      <use xlink:href="#AvenirNext-Medium-28" transform="translate(950.296875 0)"/>
+      <use xlink:href="#AvenirNext-Medium-31" transform="translate(1010.390625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-2a" transform="translate(1087.59375 0)"/>
+      <use xlink:href="#AvenirNext-Medium-37" transform="translate(1160.59375 0)"/>
+      <use xlink:href="#AvenirNext-Medium-2b" transform="translate(1217.5 0)"/>
+      <use xlink:href="#AvenirNext-Medium-3" transform="translate(1290.40625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-b" transform="translate(1315.40625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-47" transform="translate(1346.90625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-44" transform="translate(1410.40625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-5c" transform="translate(1464.609375 0)"/>
+      <use xlink:href="#AvenirNext-Medium-56" transform="translate(1515.015625 0)"/>
+      <use xlink:href="#AvenirNext-Medium-c" transform="translate(1559.421875 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_13"/>
+     <g id="text_8">
+      <!-- Mar 10 – Mar 10 -->
+      <g style="fill: #777777" transform="translate(12.919375 370.422555) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-30" d="M 2893 1050 
+L 2906 1050 
+L 4243 4531 
+L 5229 4531 
+L 5229 0 
+L 4595 0 
+L 4595 3789 
+L 4582 3789 
+L 3078 0 
+L 2675 0 
+L 1178 3789 
+L 1165 3789 
+L 1165 0 
+L 550 0 
+L 550 4531 
+L 1536 4531 
+L 2893 1050 
+z
+" transform="scale(0.015625)"/>
+        <path id="AvenirNext-Medium-55" d="M 518 2381 
+Q 518 2502 512 2694 
+Q 506 2886 493 3034 
+L 1062 3034 
+Q 1075 2918 1081 2768 
+Q 1088 2618 1088 2522 
+L 1107 2522 
+Q 1235 2790 1481 2953 
+Q 1728 3117 2035 3117 
+Q 2176 3117 2272 3091 
+L 2246 2534 
+Q 2118 2566 1971 2566 
+Q 1754 2566 1594 2486 
+Q 1434 2406 1328 2272 
+Q 1222 2138 1171 1962 
+Q 1120 1786 1120 1594 
+L 1120 0 
+L 518 0 
+L 518 2381 
+L 518 2381 
+z
+" transform="scale(0.015625)"/>
+        <path id="AvenirNext-Medium-14a" d="M 2368 1325 
+L 192 1325 
+L 192 1805 
+L 2368 1805 
+L 2368 1325 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-30"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(90.296875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(144.5 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(180.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(205.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(265.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(324.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(349.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(389.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-30" transform="translate(414.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(505 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(559.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(595.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(620.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(679.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_14"/>
+     <g id="text_9">
+      <!-- Mar 06 – Mar 06 -->
+      <g style="fill: #777777" transform="translate(12.919375 338.137543) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-19" d="M 1478 2707 
+L 1485 2694 
+Q 1581 2752 1741 2784 
+Q 1901 2816 2048 2816 
+Q 2342 2816 2601 2710 
+Q 2861 2605 3053 2416 
+Q 3245 2227 3353 1964 
+Q 3462 1702 3462 1395 
+Q 3462 1056 3344 777 
+Q 3226 499 3014 300 
+Q 2803 102 2518 -6 
+Q 2234 -115 1901 -115 
+Q 1562 -115 1274 -3 
+Q 986 109 778 307 
+Q 570 506 451 781 
+Q 333 1056 333 1376 
+Q 333 1747 454 2048 
+Q 576 2349 774 2662 
+L 1958 4531 
+L 2694 4531 
+L 1478 2707 
+z
+M 960 1370 
+Q 960 1171 1027 995 
+Q 1094 819 1219 691 
+Q 1344 563 1517 486 
+Q 1690 410 1901 410 
+Q 2112 410 2281 480 
+Q 2451 550 2576 681 
+Q 2701 813 2768 989 
+Q 2835 1165 2835 1376 
+Q 2835 1581 2768 1753 
+Q 2701 1926 2582 2054 
+Q 2464 2182 2291 2252 
+Q 2118 2323 1907 2323 
+Q 1696 2323 1520 2252 
+Q 1344 2182 1219 2054 
+Q 1094 1926 1027 1753 
+Q 960 1581 960 1370 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-30"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(90.296875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(144.5 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(180.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(205.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-19" transform="translate(265.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(324.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(349.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(389.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-30" transform="translate(414.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(505 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(559.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(595.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(620.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-19" transform="translate(679.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15"/>
+     <g id="text_10">
+      <!-- Mar 04 – Mar 04 -->
+      <g style="fill: #777777" transform="translate(12.919375 305.852531) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-17" d="M 2886 1549 
+L 3539 1549 
+L 3539 1018 
+L 2886 1018 
+L 2886 0 
+L 2285 0 
+L 2285 1018 
+L 198 1018 
+L 198 1581 
+L 2125 4531 
+L 2886 4531 
+L 2886 1549 
+z
+M 2285 3821 
+L 2272 3821 
+L 838 1549 
+L 2285 1549 
+L 2285 3821 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-30"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(90.296875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(144.5 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(180.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(205.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-17" transform="translate(265.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(324.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(349.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(389.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-30" transform="translate(414.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(505 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(559.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(595.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(620.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-17" transform="translate(679.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_16"/>
+     <g id="text_11">
+      <!-- Jan 09 – Jan 09 -->
+      <g style="fill: #777777" transform="translate(16.917813 273.567518) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-2d" d="M 685 1011 
+Q 736 768 909 608 
+Q 1082 448 1338 448 
+Q 1542 448 1673 525 
+Q 1805 602 1881 733 
+Q 1958 864 1990 1040 
+Q 2022 1216 2022 1414 
+L 2022 4531 
+L 2656 4531 
+L 2656 1389 
+Q 2656 1152 2605 889 
+Q 2554 627 2413 403 
+Q 2272 179 2019 32 
+Q 1766 -115 1370 -115 
+Q 851 -115 524 153 
+Q 198 422 96 845 
+L 685 1011 
+z
+" transform="scale(0.015625)"/>
+        <path id="AvenirNext-Medium-51" d="M 1062 3034 
+Q 1075 2918 1081 2774 
+Q 1088 2630 1088 2534 
+L 1107 2534 
+Q 1165 2656 1264 2761 
+Q 1363 2867 1491 2947 
+Q 1619 3027 1772 3072 
+Q 1926 3117 2093 3117 
+Q 2387 3117 2598 3017 
+Q 2810 2918 2950 2752 
+Q 3091 2586 3158 2362 
+Q 3226 2138 3226 1882 
+L 3226 0 
+L 2624 0 
+L 2624 1683 
+Q 2624 1869 2595 2035 
+Q 2566 2202 2489 2330 
+Q 2413 2458 2278 2534 
+Q 2144 2611 1933 2611 
+Q 1574 2611 1347 2339 
+Q 1120 2067 1120 1613 
+L 1120 0 
+L 518 0 
+L 518 2381 
+Q 518 2502 512 2694 
+Q 506 2886 493 3034 
+L 1062 3034 
+z
+" transform="scale(0.015625)"/>
+        <path id="AvenirNext-Medium-1c" d="M 2336 1830 
+L 2330 1837 
+Q 2234 1779 2067 1747 
+Q 1990 1734 1910 1724 
+Q 1830 1715 1760 1715 
+Q 1459 1715 1203 1820 
+Q 947 1926 755 2115 
+Q 563 2304 454 2566 
+Q 346 2829 346 3136 
+Q 346 3475 464 3753 
+Q 582 4032 793 4230 
+Q 1005 4429 1293 4537 
+Q 1581 4646 1914 4646 
+Q 2246 4646 2534 4534 
+Q 2822 4422 3030 4224 
+Q 3238 4026 3356 3750 
+Q 3475 3475 3475 3155 
+Q 3475 2784 3353 2483 
+Q 3232 2182 3040 1869 
+L 1856 0 
+L 1120 0 
+L 2336 1830 
+z
+M 2854 3162 
+Q 2854 3360 2787 3536 
+Q 2720 3712 2595 3843 
+Q 2470 3974 2297 4051 
+Q 2125 4128 1914 4128 
+Q 1702 4128 1529 4054 
+Q 1357 3981 1232 3853 
+Q 1107 3725 1040 3545 
+Q 973 3366 973 3155 
+Q 973 2950 1040 2777 
+Q 1107 2605 1228 2477 
+Q 1350 2349 1523 2278 
+Q 1696 2208 1907 2208 
+Q 2118 2208 2294 2278 
+Q 2470 2349 2595 2477 
+Q 2720 2605 2787 2777 
+Q 2854 2950 2854 3162 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-2d"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(48.90625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(103.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(161.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(186.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-1c" transform="translate(245.8125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(305.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(330.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(370.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-2d" transform="translate(394.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(443.015625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(497.21875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(555.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(580.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-1c" transform="translate(639.921875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_17"/>
+     <g id="text_12">
+      <!-- Jan 12 – Jan 13 -->
+      <g style="fill: #777777" transform="translate(16.917813 241.282506) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-16" d="M 1363 2624 
+L 1562 2624 
+Q 1754 2624 1936 2659 
+Q 2118 2694 2259 2780 
+Q 2400 2867 2486 3014 
+Q 2573 3162 2573 3379 
+Q 2573 3552 2509 3689 
+Q 2445 3827 2333 3923 
+Q 2221 4019 2077 4073 
+Q 1933 4128 1773 4128 
+Q 1485 4128 1283 3981 
+Q 1082 3834 979 3571 
+L 416 3770 
+Q 582 4179 950 4412 
+Q 1318 4646 1798 4646 
+Q 2080 4646 2333 4566 
+Q 2586 4486 2778 4332 
+Q 2970 4179 3082 3948 
+Q 3194 3718 3194 3418 
+Q 3194 3226 3133 3059 
+Q 3072 2893 2966 2758 
+Q 2861 2624 2713 2528 
+Q 2566 2432 2394 2387 
+L 2394 2374 
+Q 2592 2336 2761 2240 
+Q 2931 2144 3052 2000 
+Q 3174 1856 3244 1670 
+Q 3315 1485 3315 1267 
+Q 3315 928 3187 669 
+Q 3059 410 2848 237 
+Q 2637 64 2361 -25 
+Q 2086 -115 1798 -115 
+Q 1261 -115 851 128 
+Q 442 371 256 883 
+L 832 1075 
+Q 934 781 1180 595 
+Q 1427 410 1786 410 
+Q 1958 410 2121 464 
+Q 2285 518 2413 627 
+Q 2541 736 2617 896 
+Q 2694 1056 2694 1274 
+Q 2694 1510 2592 1670 
+Q 2490 1830 2326 1929 
+Q 2163 2029 1958 2070 
+Q 1754 2112 1555 2112 
+L 1363 2112 
+L 1363 2624 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-2d"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(48.90625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(103.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(161.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(186.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-15" transform="translate(245.8125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(305.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(330.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(370.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-2d" transform="translate(394.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(443.015625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(497.21875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(555.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(580.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-16" transform="translate(639.921875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <!-- Mar 28 – Mar 30 -->
+      <g style="fill: #777777" transform="translate(12.919375 208.997494) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-1b" d="M 2566 2387 
+Q 2746 2342 2902 2236 
+Q 3059 2131 3174 1984 
+Q 3290 1837 3357 1645 
+Q 3424 1453 3424 1235 
+Q 3424 915 3302 665 
+Q 3181 416 2973 243 
+Q 2765 70 2489 -22 
+Q 2214 -115 1907 -115 
+Q 1600 -115 1321 -22 
+Q 1043 70 835 243 
+Q 627 416 505 665 
+Q 384 915 384 1235 
+Q 384 1459 451 1651 
+Q 518 1843 636 1990 
+Q 755 2138 912 2237 
+Q 1069 2336 1242 2387 
+L 1242 2400 
+Q 934 2509 739 2771 
+Q 544 3034 544 3411 
+Q 544 3693 653 3920 
+Q 762 4147 947 4310 
+Q 1133 4474 1379 4560 
+Q 1626 4646 1907 4646 
+Q 2182 4646 2432 4560 
+Q 2682 4474 2864 4317 
+Q 3046 4160 3155 3933 
+Q 3264 3706 3264 3424 
+Q 3264 3053 3069 2777 
+Q 2874 2502 2566 2400 
+L 2566 2387 
+z
+M 1165 3392 
+Q 1165 3238 1219 3104 
+Q 1274 2970 1373 2870 
+Q 1472 2771 1609 2713 
+Q 1747 2656 1907 2656 
+Q 2061 2656 2195 2713 
+Q 2330 2771 2432 2870 
+Q 2534 2970 2592 3104 
+Q 2650 3238 2650 3392 
+Q 2650 3552 2589 3689 
+Q 2528 3827 2429 3926 
+Q 2330 4026 2195 4080 
+Q 2061 4134 1907 4134 
+Q 1747 4134 1609 4080 
+Q 1472 4026 1373 3926 
+Q 1274 3827 1219 3689 
+Q 1165 3552 1165 3392 
+z
+M 1018 1267 
+Q 1018 1075 1082 915 
+Q 1146 755 1264 643 
+Q 1382 531 1545 467 
+Q 1709 403 1907 403 
+Q 2099 403 2262 467 
+Q 2426 531 2541 643 
+Q 2656 755 2723 915 
+Q 2790 1075 2790 1267 
+Q 2790 1453 2723 1609 
+Q 2656 1766 2541 1881 
+Q 2426 1997 2262 2061 
+Q 2099 2125 1907 2125 
+Q 1715 2125 1552 2061 
+Q 1389 1997 1270 1881 
+Q 1152 1766 1085 1609 
+Q 1018 1453 1018 1267 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-30"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(90.296875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(144.5 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(180.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-15" transform="translate(205.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-1b" transform="translate(265.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(324.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(349.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(389.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-30" transform="translate(414.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(505 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(559.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(595.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-16" transform="translate(620.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(679.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19"/>
+     <g id="text_14">
+      <!-- Jan 01 – Jan 07 -->
+      <g style="fill: #777777" transform="translate(16.917813 176.712482) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-1a" d="M 3296 3968 
+L 1478 0 
+L 768 0 
+L 2656 3981 
+L 410 3981 
+L 410 4531 
+L 3296 4531 
+L 3296 3968 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-2d"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(48.90625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(103.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(161.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(186.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(245.8125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(305.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(330.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(370.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-2d" transform="translate(394.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(443.015625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(497.21875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(555.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(580.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-1a" transform="translate(639.921875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_20"/>
+     <g id="text_15">
+      <!-- Mar 12 – Mar 19 -->
+      <g style="fill: #777777" transform="translate(12.919375 144.427469) scale(0.1 -0.1)">
+       <use xlink:href="#AvenirNext-Medium-30"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(90.296875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(144.5 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(180.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(205.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-15" transform="translate(265.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(324.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(349.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(389.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-30" transform="translate(414.703125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(505 0)"/>
+       <use xlink:href="#AvenirNext-Medium-55" transform="translate(559.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(595.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(620.40625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-1c" transform="translate(679.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_21"/>
+     <g id="text_16">
+      <!-- Jan 17 – Jan 26 -->
+      <g style="fill: #777777" transform="translate(16.917813 112.142457) scale(0.1 -0.1)">
+       <use xlink:href="#AvenirNext-Medium-2d"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(48.90625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(103.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(161.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14" transform="translate(186.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-1a" transform="translate(245.8125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(305.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(330.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(370.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-2d" transform="translate(394.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(443.015625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(497.21875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(555.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-15" transform="translate(580.421875 0)"/>
+       <use xlink:href="#AvenirNext-Medium-19" transform="translate(639.921875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_22"/>
+     <g id="text_17">
+      <!-- Jan 30 – Feb 20 -->
+      <g style="fill: #777777" transform="translate(15.639688 79.857445) scale(0.1 -0.1)">
+       <defs>
+        <path id="AvenirNext-Medium-48" d="M 2739 1786 
+Q 2733 1965 2678 2121 
+Q 2624 2278 2518 2393 
+Q 2413 2509 2256 2576 
+Q 2099 2643 1888 2643 
+Q 1696 2643 1526 2576 
+Q 1357 2509 1232 2393 
+Q 1107 2278 1027 2121 
+Q 947 1965 934 1786 
+L 2739 1786 
+z
+M 3347 1542 
+Q 3347 1491 3347 1440 
+Q 3347 1389 3341 1338 
+L 934 1338 
+Q 941 1146 1021 976 
+Q 1101 806 1235 681 
+Q 1370 557 1546 486 
+Q 1722 416 1920 416 
+Q 2227 416 2451 550 
+Q 2675 685 2803 877 
+L 3226 538 
+Q 2982 218 2652 67 
+Q 2323 -83 1920 -83 
+Q 1574 -83 1280 32 
+Q 986 147 774 355 
+Q 563 563 441 857 
+Q 320 1152 320 1510 
+Q 320 1862 438 2160 
+Q 557 2458 768 2669 
+Q 979 2880 1267 2998 
+Q 1555 3117 1888 3117 
+Q 2221 3117 2493 3008 
+Q 2765 2899 2953 2694 
+Q 3142 2490 3244 2198 
+Q 3347 1907 3347 1542 
+z
+" transform="scale(0.015625)"/>
+        <path id="AvenirNext-Medium-45" d="M 1114 480 
+L 1114 0 
+L 531 0 
+L 531 4838 
+L 1133 4838 
+L 1133 2579 
+L 1152 2579 
+Q 1306 2803 1581 2960 
+Q 1856 3117 2234 3117 
+Q 2573 3117 2851 2995 
+Q 3130 2874 3331 2656 
+Q 3533 2438 3641 2147 
+Q 3750 1856 3750 1523 
+Q 3750 1190 3641 896 
+Q 3533 602 3334 384 
+Q 3136 166 2854 41 
+Q 2573 -83 2221 -83 
+Q 1894 -83 1600 61 
+Q 1306 205 1126 480 
+L 1114 480 
+z
+M 3130 1523 
+Q 3130 1734 3066 1932 
+Q 3002 2131 2874 2284 
+Q 2746 2438 2557 2528 
+Q 2368 2618 2118 2618 
+Q 1888 2618 1699 2528 
+Q 1510 2438 1376 2284 
+Q 1242 2131 1168 1932 
+Q 1094 1734 1094 1517 
+Q 1094 1299 1168 1100 
+Q 1242 902 1376 752 
+Q 1510 602 1699 512 
+Q 1888 422 2118 422 
+Q 2368 422 2557 515 
+Q 2746 608 2874 761 
+Q 3002 915 3066 1113 
+Q 3130 1312 3130 1523 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#AvenirNext-Medium-2d"/>
+       <use xlink:href="#AvenirNext-Medium-44" transform="translate(48.90625 0)"/>
+       <use xlink:href="#AvenirNext-Medium-51" transform="translate(103.109375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(161.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-16" transform="translate(186.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(245.8125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(305.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-14a" transform="translate(330.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(370.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-29" transform="translate(395.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-48" transform="translate(447.3125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-45" transform="translate(504.609375 0)"/>
+       <use xlink:href="#AvenirNext-Medium-3" transform="translate(568.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-15" transform="translate(593.203125 0)"/>
+       <use xlink:href="#AvenirNext-Medium-13" transform="translate(652.703125 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 90.36 375.430909 
+L 114.76678 375.430909 
+L 114.76678 355.414201 
+L 90.36 355.414201 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 90.36 343.145897 
+L 114.76678 343.145897 
+L 114.76678 323.129189 
+L 90.36 323.129189 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 90.36 310.860885 
+L 114.76678 310.860885 
+L 114.76678 290.844177 
+L 90.36 290.844177 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 90.36 278.575872 
+L 114.76678 278.575872 
+L 114.76678 258.559165 
+L 90.36 258.559165 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 90.36 246.29086 
+L 139.173559 246.29086 
+L 139.173559 226.274152 
+L 90.36 226.274152 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 90.36 214.005848 
+L 163.580339 214.005848 
+L 163.580339 193.98914 
+L 90.36 193.98914 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 90.36 181.720835 
+L 261.207458 181.720835 
+L 261.207458 161.704128 
+L 90.36 161.704128 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 90.36 149.435823 
+L 285.614237 149.435823 
+L 285.614237 129.419115 
+L 90.36 129.419115 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 90.36 117.150811 
+L 334.427797 117.150811 
+L 334.427797 97.134103 
+L 90.36 97.134103 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #dae3f0; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 90.36 84.865799 
+L 627.309153 84.865799 
+L 627.309153 64.849091 
+L 90.36 64.849091 
+z
+" clip-path="url(#p989bc92c68)" style="fill: #425167; stroke: #363636; stroke-width: 0.6; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 90.36 390.96 
+L 723.96 390.96 
+" style="fill: none; stroke: #777777; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_18">
+    <!-- 1 -->
+    <g style="fill: #777777" transform="translate(120.76678 368.275555) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-14"/>
+    </g>
+   </g>
+   <g id="text_19">
+    <!-- 1 -->
+    <g style="fill: #777777" transform="translate(120.76678 335.990543) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-14"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <!-- 1 -->
+    <g style="fill: #777777" transform="translate(120.76678 303.705531) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-14"/>
+    </g>
+   </g>
+   <g id="text_21">
+    <!-- 1 -->
+    <g style="fill: #777777" transform="translate(120.76678 271.420518) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-14"/>
+    </g>
+   </g>
+   <g id="text_22">
+    <!-- 2 -->
+    <g style="fill: #777777" transform="translate(145.173559 239.135506) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-15"/>
+    </g>
+   </g>
+   <g id="text_23">
+    <!-- 3 -->
+    <g style="fill: #777777" transform="translate(169.580339 206.850494) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-16"/>
+    </g>
+   </g>
+   <g id="text_24">
+    <!-- 7 -->
+    <g style="fill: #777777" transform="translate(267.207458 174.565482) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-1a"/>
+    </g>
+   </g>
+   <g id="text_25">
+    <!-- 8 -->
+    <g style="fill: #777777" transform="translate(291.614237 142.280469) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-1b"/>
+    </g>
+   </g>
+   <g id="text_26">
+    <!-- 10 -->
+    <g style="fill: #777777" transform="translate(340.427797 109.995457) scale(0.09 -0.09)">
+     <use xlink:href="#AvenirNext-Medium-14"/>
+     <use xlink:href="#AvenirNext-Medium-13" transform="translate(59.5 0)"/>
+    </g>
+   </g>
+   <g id="text_27">
+    <!-- 22 -->
+    <g style="fill: #363636" transform="translate(633.309153 78.027445) scale(0.1 -0.1)">
+     <defs>
+      <path id="AvenirNext-DemiBold-15" d="M 442 704 
+L 2189 2419 
+Q 2400 2624 2525 2832 
+Q 2650 3040 2650 3309 
+Q 2650 3629 2442 3817 
+Q 2234 4006 1926 4006 
+Q 1600 4006 1401 3785 
+Q 1203 3565 1158 3232 
+L 410 3347 
+Q 442 3629 570 3865 
+Q 698 4102 896 4275 
+Q 1094 4448 1360 4547 
+Q 1626 4646 1939 4646 
+Q 2234 4646 2506 4563 
+Q 2778 4480 2989 4310 
+Q 3200 4141 3325 3894 
+Q 3450 3648 3450 3322 
+Q 3450 3104 3392 2915 
+Q 3334 2726 3235 2560 
+Q 3136 2394 3005 2243 
+Q 2874 2093 2720 1952 
+L 1414 704 
+L 3456 704 
+L 3456 0 
+L 442 0 
+L 442 704 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#AvenirNext-DemiBold-15"/>
+     <use xlink:href="#AvenirNext-DemiBold-15" transform="translate(61 0)"/>
+    </g>
+   </g>
+   <g id="text_28">
+    <!-- Longest streak -->
+    <g style="fill: #363636" transform="translate(587.010715 56.465445) scale(0.12 -0.12)">
+     <defs>
+      <path id="AvenirNext-DemiBold-2f" d="M 499 4531 
+L 1306 4531 
+L 1306 717 
+L 3232 717 
+L 3232 0 
+L 499 0 
+L 499 4531 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-52" d="M 282 1549 
+Q 282 1914 413 2211 
+Q 544 2509 768 2720 
+Q 992 2931 1299 3046 
+Q 1606 3162 1952 3162 
+Q 2298 3162 2605 3046 
+Q 2912 2931 3136 2720 
+Q 3360 2509 3491 2211 
+Q 3622 1914 3622 1549 
+Q 3622 1184 3491 883 
+Q 3360 582 3136 368 
+Q 2912 154 2605 32 
+Q 2298 -90 1952 -90 
+Q 1606 -90 1299 32 
+Q 992 154 768 368 
+Q 544 582 413 883 
+Q 282 1184 282 1549 
+z
+M 1062 1549 
+Q 1062 1370 1116 1190 
+Q 1171 1011 1280 870 
+Q 1389 730 1555 640 
+Q 1722 550 1952 550 
+Q 2182 550 2348 640 
+Q 2515 730 2624 870 
+Q 2733 1011 2787 1190 
+Q 2842 1370 2842 1549 
+Q 2842 1728 2787 1904 
+Q 2733 2080 2624 2221 
+Q 2515 2362 2348 2448 
+Q 2182 2534 1952 2534 
+Q 1722 2534 1555 2448 
+Q 1389 2362 1280 2221 
+Q 1171 2080 1116 1904 
+Q 1062 1728 1062 1549 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-51" d="M 461 3072 
+L 1190 3072 
+L 1190 2579 
+L 1203 2579 
+Q 1306 2810 1558 2986 
+Q 1811 3162 2157 3162 
+Q 2458 3162 2672 3056 
+Q 2886 2950 3024 2777 
+Q 3162 2605 3226 2381 
+Q 3290 2157 3290 1920 
+L 3290 0 
+L 2522 0 
+L 2522 1702 
+Q 2522 1837 2502 1984 
+Q 2483 2131 2419 2249 
+Q 2355 2368 2243 2445 
+Q 2131 2522 1946 2522 
+Q 1760 2522 1625 2448 
+Q 1491 2374 1404 2259 
+Q 1318 2144 1273 1993 
+Q 1229 1843 1229 1690 
+L 1229 0 
+L 461 0 
+L 461 3072 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-4a" d="M 3584 3072 
+L 3584 275 
+Q 3584 -141 3481 -477 
+Q 3379 -813 3164 -1046 
+Q 2950 -1280 2624 -1408 
+Q 2298 -1536 1850 -1536 
+Q 1664 -1536 1456 -1504 
+Q 1248 -1472 1046 -1408 
+Q 845 -1344 659 -1248 
+Q 474 -1152 326 -1030 
+L 768 -435 
+Q 992 -646 1273 -758 
+Q 1555 -870 1843 -870 
+Q 2118 -870 2307 -790 
+Q 2496 -710 2608 -569 
+Q 2720 -429 2768 -237 
+Q 2816 -45 2816 186 
+L 2816 410 
+L 2803 410 
+Q 2637 186 2377 67 
+Q 2118 -51 1798 -51 
+Q 1453 -51 1171 77 
+Q 890 205 694 422 
+Q 499 640 390 931 
+Q 282 1222 282 1549 
+Q 282 1882 387 2176 
+Q 493 2470 688 2688 
+Q 883 2906 1161 3034 
+Q 1440 3162 1786 3162 
+Q 2112 3162 2393 3027 
+Q 2675 2893 2842 2611 
+L 2854 2611 
+L 2854 3072 
+L 3584 3072 
+z
+M 1946 2534 
+Q 1734 2534 1571 2457 
+Q 1408 2381 1296 2249 
+Q 1184 2118 1123 1939 
+Q 1062 1760 1062 1555 
+Q 1062 1370 1123 1197 
+Q 1184 1024 1296 886 
+Q 1408 749 1571 665 
+Q 1734 582 1939 582 
+Q 2150 582 2320 662 
+Q 2490 742 2608 876 
+Q 2726 1011 2790 1187 
+Q 2854 1363 2854 1555 
+Q 2854 1754 2790 1933 
+Q 2726 2112 2608 2246 
+Q 2490 2381 2323 2457 
+Q 2157 2534 1946 2534 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-48" d="M 2624 1843 
+Q 2624 1990 2582 2124 
+Q 2541 2259 2451 2361 
+Q 2362 2464 2224 2525 
+Q 2086 2586 1901 2586 
+Q 1555 2586 1315 2378 
+Q 1075 2170 1050 1843 
+L 2624 1843 
+z
+M 3392 1498 
+Q 3392 1446 3392 1395 
+Q 3392 1344 3386 1293 
+L 1050 1293 
+Q 1062 1126 1136 988 
+Q 1210 851 1331 752 
+Q 1453 653 1606 595 
+Q 1760 538 1926 538 
+Q 2214 538 2412 643 
+Q 2611 749 2739 934 
+L 3251 525 
+Q 2797 -90 1933 -90 
+Q 1574 -90 1273 22 
+Q 973 134 752 339 
+Q 531 544 406 841 
+Q 282 1139 282 1517 
+Q 282 1888 406 2192 
+Q 531 2496 748 2710 
+Q 966 2925 1264 3043 
+Q 1562 3162 1907 3162 
+Q 2227 3162 2499 3056 
+Q 2771 2950 2969 2742 
+Q 3168 2534 3280 2224 
+Q 3392 1914 3392 1498 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-56" d="M 2144 2253 
+Q 2042 2387 1862 2486 
+Q 1683 2586 1472 2586 
+Q 1286 2586 1132 2509 
+Q 979 2432 979 2253 
+Q 979 2074 1148 2000 
+Q 1318 1926 1645 1850 
+Q 1818 1811 1994 1747 
+Q 2170 1683 2314 1577 
+Q 2458 1472 2547 1315 
+Q 2637 1158 2637 934 
+Q 2637 653 2531 457 
+Q 2426 262 2250 140 
+Q 2074 19 1840 -35 
+Q 1606 -90 1357 -90 
+Q 998 -90 659 41 
+Q 320 173 96 416 
+L 602 890 
+Q 730 723 934 614 
+Q 1139 506 1389 506 
+Q 1472 506 1558 525 
+Q 1645 544 1718 585 
+Q 1792 627 1837 697 
+Q 1882 768 1882 870 
+Q 1882 1062 1706 1145 
+Q 1530 1229 1178 1312 
+Q 1005 1350 841 1411 
+Q 678 1472 550 1571 
+Q 422 1670 345 1817 
+Q 269 1965 269 2182 
+Q 269 2438 374 2624 
+Q 480 2810 653 2928 
+Q 826 3046 1043 3104 
+Q 1261 3162 1491 3162 
+Q 1824 3162 2141 3046 
+Q 2458 2931 2643 2694 
+L 2144 2253 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-57" d="M 19 2458 
+L 19 3072 
+L 557 3072 
+L 557 3962 
+L 1312 3962 
+L 1312 3072 
+L 2080 3072 
+L 2080 2458 
+L 1312 2458 
+L 1312 1030 
+Q 1312 826 1385 691 
+Q 1459 557 1715 557 
+Q 1792 557 1881 573 
+Q 1971 589 2042 621 
+L 2067 19 
+Q 1965 -19 1824 -41 
+Q 1683 -64 1555 -64 
+Q 1248 -64 1056 22 
+Q 864 109 752 259 
+Q 640 410 598 605 
+Q 557 800 557 1024 
+L 557 2458 
+L 19 2458 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-3" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-55" d="M 461 3072 
+L 1197 3072 
+L 1197 2560 
+L 1210 2560 
+Q 1338 2829 1568 2995 
+Q 1798 3162 2106 3162 
+Q 2150 3162 2201 3158 
+Q 2253 3155 2291 3142 
+L 2291 2438 
+Q 2214 2458 2160 2464 
+Q 2106 2470 2054 2470 
+Q 1792 2470 1632 2374 
+Q 1472 2278 1382 2144 
+Q 1293 2010 1261 1869 
+Q 1229 1728 1229 1645 
+L 1229 0 
+L 461 0 
+L 461 3072 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-44" d="M 2368 390 
+L 2349 390 
+Q 2234 186 1978 54 
+Q 1722 -77 1395 -77 
+Q 1210 -77 1008 -29 
+Q 806 19 636 131 
+Q 467 243 355 425 
+Q 243 608 243 877 
+Q 243 1222 438 1427 
+Q 634 1632 941 1741 
+Q 1248 1850 1622 1885 
+Q 1997 1920 2355 1920 
+L 2355 1997 
+Q 2355 2285 2147 2422 
+Q 1939 2560 1651 2560 
+Q 1408 2560 1184 2457 
+Q 960 2355 813 2208 
+L 416 2675 
+Q 678 2918 1020 3040 
+Q 1363 3162 1715 3162 
+Q 2125 3162 2390 3046 
+Q 2656 2931 2809 2745 
+Q 2963 2560 3024 2329 
+Q 3085 2099 3085 1869 
+L 3085 0 
+L 2368 0 
+L 2368 390 
+z
+M 2355 1402 
+L 2182 1402 
+Q 1997 1402 1792 1386 
+Q 1587 1370 1414 1315 
+Q 1242 1261 1126 1161 
+Q 1011 1062 1011 890 
+Q 1011 781 1059 707 
+Q 1107 634 1184 589 
+Q 1261 544 1357 525 
+Q 1453 506 1549 506 
+Q 1946 506 2150 717 
+Q 2355 928 2355 1293 
+L 2355 1402 
+z
+" transform="scale(0.015625)"/>
+      <path id="AvenirNext-DemiBold-4e" d="M 474 4838 
+L 1242 4838 
+L 1242 1779 
+L 1261 1779 
+L 2426 3072 
+L 3411 3072 
+L 2080 1683 
+L 3494 0 
+L 2477 0 
+L 1261 1574 
+L 1242 1574 
+L 1242 0 
+L 474 0 
+L 474 4838 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#AvenirNext-DemiBold-2f"/>
+     <use xlink:href="#AvenirNext-DemiBold-52" transform="translate(49.296875 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-51" transform="translate(110.296875 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-4a" transform="translate(168.5 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(231.703125 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-56" transform="translate(289.109375 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-57" transform="translate(333.515625 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(367.515625 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-56" transform="translate(392.515625 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-57" transform="translate(436.921875 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(470.921875 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(505.53125 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(562.34375 0)"/>
+     <use xlink:href="#AvenirNext-DemiBold-4e" transform="translate(617.34375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="text_29">
+   <!-- Longest Freezing Streaks -->
+   <g style="fill: #363636" transform="translate(7.2 29.2) scale(0.22 -0.22)">
+    <defs>
+     <path id="AvenirNext-DemiBold-29" d="M 499 4531 
+L 3424 4531 
+L 3424 3827 
+L 1306 3827 
+L 1306 2586 
+L 3302 2586 
+L 3302 1907 
+L 1306 1907 
+L 1306 0 
+L 499 0 
+L 499 4531 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-5d" d="M 218 678 
+L 1875 2458 
+L 294 2458 
+L 294 3072 
+L 2790 3072 
+L 2790 2394 
+L 1126 627 
+L 2867 627 
+L 2867 0 
+L 218 0 
+L 218 678 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-4c" d="M 474 3072 
+L 1242 3072 
+L 1242 0 
+L 474 0 
+L 474 3072 
+z
+M 365 4115 
+Q 365 4301 502 4438 
+Q 640 4576 851 4576 
+Q 1062 4576 1206 4445 
+Q 1350 4314 1350 4115 
+Q 1350 3917 1206 3785 
+Q 1062 3654 851 3654 
+Q 640 3654 502 3792 
+Q 365 3930 365 4115 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-36" d="M 2810 3584 
+Q 2682 3750 2448 3862 
+Q 2214 3974 1978 3974 
+Q 1837 3974 1696 3939 
+Q 1555 3904 1440 3830 
+Q 1325 3757 1251 3638 
+Q 1178 3520 1178 3354 
+Q 1178 3200 1242 3091 
+Q 1306 2982 1418 2905 
+Q 1530 2829 1690 2771 
+Q 1850 2714 2042 2656 
+Q 2259 2586 2492 2496 
+Q 2726 2406 2921 2259 
+Q 3117 2112 3241 1888 
+Q 3366 1664 3366 1331 
+Q 3366 966 3232 694 
+Q 3098 422 2874 243 
+Q 2650 64 2349 -25 
+Q 2048 -115 1715 -115 
+Q 1274 -115 851 48 
+Q 429 211 160 531 
+L 736 1069 
+Q 902 838 1180 704 
+Q 1459 570 1728 570 
+Q 1869 570 2016 605 
+Q 2163 640 2281 723 
+Q 2400 806 2473 931 
+Q 2547 1056 2547 1242 
+Q 2547 1421 2464 1539 
+Q 2381 1658 2240 1744 
+Q 2099 1830 1907 1894 
+Q 1715 1958 1504 2029 
+Q 1299 2093 1094 2182 
+Q 890 2272 726 2419 
+Q 563 2566 460 2780 
+Q 358 2995 358 3315 
+Q 358 3661 502 3910 
+Q 646 4160 880 4323 
+Q 1114 4486 1411 4566 
+Q 1709 4646 2016 4646 
+Q 2362 4646 2717 4524 
+Q 3072 4403 3334 4160 
+L 2810 3584 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#AvenirNext-DemiBold-2f"/>
+    <use xlink:href="#AvenirNext-DemiBold-52" transform="translate(49.296875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-51" transform="translate(110.296875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4a" transform="translate(168.5 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(231.703125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-56" transform="translate(289.109375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-57" transform="translate(333.515625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(367.515625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-29" transform="translate(392.515625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(445.609375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(480.21875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(537.625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-5d" transform="translate(595.03125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4c" transform="translate(643.234375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-51" transform="translate(670.03125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4a" transform="translate(728.234375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(791.4375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-36" transform="translate(816.4375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-57" transform="translate(873.25 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(907.25 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(941.859375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(998.671875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4e" transform="translate(1053.671875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-56" transform="translate(1107.375 0)"/>
+   </g>
+  </g>
+  <g id="text_30">
+   <!-- Calgary, January – March 2025 -->
+   <g style="fill: #777777" transform="translate(7.2 46.98) scale(0.11 -0.11)">
+    <defs>
+     <path id="AvenirNext-DemiBold-26" d="M 3770 3469 
+Q 3590 3712 3302 3824 
+Q 3014 3936 2739 3936 
+Q 2387 3936 2099 3808 
+Q 1811 3680 1603 3456 
+Q 1395 3232 1283 2931 
+Q 1171 2630 1171 2278 
+Q 1171 1907 1280 1600 
+Q 1389 1293 1590 1072 
+Q 1792 851 2073 729 
+Q 2355 608 2707 608 
+Q 3072 608 3353 752 
+Q 3635 896 3808 1133 
+L 4454 678 
+Q 4154 301 3718 93 
+Q 3283 -115 2701 -115 
+Q 2170 -115 1725 61 
+Q 1280 237 960 553 
+Q 640 870 461 1308 
+Q 282 1747 282 2278 
+Q 282 2822 470 3260 
+Q 659 3699 988 4006 
+Q 1318 4314 1766 4480 
+Q 2214 4646 2739 4646 
+Q 2957 4646 3193 4604 
+Q 3430 4563 3648 4476 
+Q 3866 4390 4058 4262 
+Q 4250 4134 4384 3955 
+L 3770 3469 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-4f" d="M 474 4838 
+L 1242 4838 
+L 1242 0 
+L 474 0 
+L 474 4838 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-5c" d="M 0 3072 
+L 851 3072 
+L 1709 838 
+L 1722 838 
+L 2483 3072 
+L 3283 3072 
+L 1830 -659 
+Q 1747 -870 1651 -1033 
+Q 1555 -1197 1420 -1309 
+Q 1286 -1421 1104 -1478 
+Q 922 -1536 666 -1536 
+Q 570 -1536 470 -1526 
+Q 371 -1517 269 -1491 
+L 333 -826 
+Q 410 -851 483 -860 
+Q 557 -870 621 -870 
+Q 742 -870 825 -841 
+Q 909 -813 966 -752 
+Q 1024 -691 1069 -601 
+Q 1114 -512 1165 -390 
+L 1318 0 
+L 0 3072 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-f" d="M 602 883 
+L 1344 883 
+L 800 -806 
+L 154 -806 
+L 602 883 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-2d" d="M 2726 1466 
+Q 2726 1216 2672 941 
+Q 2618 666 2470 429 
+Q 2323 192 2054 38 
+Q 1786 -115 1363 -115 
+Q 813 -115 483 160 
+Q 154 435 32 883 
+L 774 1094 
+Q 832 870 985 739 
+Q 1139 608 1350 608 
+Q 1523 608 1635 672 
+Q 1747 736 1808 854 
+Q 1869 973 1894 1136 
+Q 1920 1299 1920 1491 
+L 1920 4531 
+L 2726 4531 
+L 2726 1466 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-58" d="M 3264 0 
+L 2534 0 
+L 2534 493 
+L 2522 493 
+Q 2419 262 2166 86 
+Q 1914 -90 1568 -90 
+Q 1267 -90 1052 16 
+Q 838 122 700 294 
+Q 563 467 499 691 
+Q 435 915 435 1152 
+L 435 3072 
+L 1203 3072 
+L 1203 1370 
+Q 1203 1235 1222 1088 
+Q 1242 941 1306 822 
+Q 1370 704 1482 627 
+Q 1594 550 1779 550 
+Q 1958 550 2096 624 
+Q 2234 698 2320 813 
+Q 2406 928 2451 1078 
+Q 2496 1229 2496 1382 
+L 2496 3072 
+L 3264 3072 
+L 3264 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-14a" d="M 2368 1280 
+L 192 1280 
+L 192 1869 
+L 2368 1869 
+L 2368 1280 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-30" d="M 499 4531 
+L 1760 4531 
+L 2938 1312 
+L 2957 1312 
+L 4122 4531 
+L 5389 4531 
+L 5389 0 
+L 4589 0 
+L 4589 3642 
+L 4576 3642 
+L 3200 0 
+L 2637 0 
+L 1280 3642 
+L 1267 3642 
+L 1267 0 
+L 499 0 
+L 499 4531 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-46" d="M 2560 2221 
+Q 2470 2349 2291 2435 
+Q 2112 2522 1926 2522 
+Q 1715 2522 1555 2435 
+Q 1395 2349 1289 2208 
+Q 1184 2067 1133 1891 
+Q 1082 1715 1082 1536 
+Q 1082 1357 1136 1181 
+Q 1190 1005 1299 864 
+Q 1408 723 1571 636 
+Q 1734 550 1952 550 
+Q 2131 550 2310 620 
+Q 2490 691 2598 826 
+L 3078 339 
+Q 2886 134 2588 22 
+Q 2291 -90 1946 -90 
+Q 1606 -90 1302 19 
+Q 998 128 771 339 
+Q 544 550 413 851 
+Q 282 1152 282 1536 
+Q 282 1907 413 2208 
+Q 544 2509 768 2720 
+Q 992 2931 1289 3046 
+Q 1587 3162 1926 3162 
+Q 2266 3162 2582 3034 
+Q 2899 2906 3085 2682 
+L 2560 2221 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-4b" d="M 2170 3162 
+Q 2470 3162 2684 3056 
+Q 2899 2950 3036 2777 
+Q 3174 2605 3238 2381 
+Q 3302 2157 3302 1920 
+L 3302 0 
+L 2534 0 
+L 2534 1690 
+Q 2534 1824 2515 1968 
+Q 2496 2112 2435 2230 
+Q 2374 2349 2262 2425 
+Q 2150 2502 1965 2502 
+Q 1779 2502 1644 2432 
+Q 1510 2362 1420 2243 
+Q 1331 2125 1286 1977 
+Q 1242 1830 1242 1677 
+L 1242 0 
+L 474 0 
+L 474 4838 
+L 1242 4838 
+L 1242 2643 
+L 1254 2643 
+Q 1299 2739 1385 2832 
+Q 1472 2925 1587 2998 
+Q 1702 3072 1849 3117 
+Q 1997 3162 2170 3162 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-13" d="M 3552 2266 
+Q 3552 1715 3446 1273 
+Q 3341 832 3139 525 
+Q 2938 218 2640 51 
+Q 2342 -115 1958 -115 
+Q 1574 -115 1273 51 
+Q 973 218 768 525 
+Q 563 832 457 1273 
+Q 352 1715 352 2266 
+Q 352 2816 457 3257 
+Q 563 3699 768 4006 
+Q 973 4314 1273 4480 
+Q 1574 4646 1958 4646 
+Q 2342 4646 2640 4480 
+Q 2938 4314 3139 4006 
+Q 3341 3699 3446 3257 
+Q 3552 2816 3552 2266 
+z
+M 2765 2266 
+Q 2765 2502 2736 2803 
+Q 2707 3104 2620 3373 
+Q 2534 3642 2374 3824 
+Q 2214 4006 1958 4006 
+Q 1696 4006 1536 3824 
+Q 1376 3642 1289 3373 
+Q 1203 3104 1171 2803 
+Q 1139 2502 1139 2266 
+Q 1139 2029 1171 1728 
+Q 1203 1427 1289 1164 
+Q 1376 902 1536 720 
+Q 1696 538 1958 538 
+Q 2214 538 2374 720 
+Q 2534 902 2620 1164 
+Q 2707 1427 2736 1728 
+Q 2765 2029 2765 2266 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-18" d="M 3232 3840 
+L 1382 3840 
+L 1338 2861 
+Q 1446 2893 1596 2905 
+Q 1747 2918 1869 2918 
+Q 2202 2918 2486 2822 
+Q 2771 2726 2982 2544 
+Q 3194 2362 3312 2096 
+Q 3430 1830 3430 1485 
+Q 3430 1107 3299 809 
+Q 3168 512 2944 307 
+Q 2720 102 2419 -6 
+Q 2118 -115 1779 -115 
+Q 1210 -115 819 150 
+Q 429 416 250 877 
+L 947 1133 
+Q 1043 864 1267 701 
+Q 1491 538 1798 538 
+Q 1971 538 2124 595 
+Q 2278 653 2393 761 
+Q 2509 870 2576 1033 
+Q 2643 1197 2643 1402 
+Q 2643 1664 2553 1837 
+Q 2464 2010 2320 2115 
+Q 2176 2221 1997 2262 
+Q 1818 2304 1632 2304 
+Q 1504 2304 1360 2285 
+Q 1216 2266 1078 2230 
+Q 941 2195 809 2150 
+Q 678 2106 576 2054 
+L 653 4531 
+L 3232 4531 
+L 3232 3840 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#AvenirNext-DemiBold-26"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(67.796875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4f" transform="translate(122.796875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4a" transform="translate(149.59375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(212.796875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(267.796875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-5c" transform="translate(304.203125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-f" transform="translate(351.90625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(374.90625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-2d" transform="translate(398.703125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(447.90625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-51" transform="translate(502.90625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-58" transform="translate(561.109375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(619.3125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(674.3125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-5c" transform="translate(710.71875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(762.015625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-14a" transform="translate(787.015625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(827.015625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-30" transform="translate(852.015625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(944.015625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(999.015625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-46" transform="translate(1033.625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4b" transform="translate(1082.421875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(1140.828125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-15" transform="translate(1165.828125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-13" transform="translate(1226.828125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-15" transform="translate(1287.828125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-18" transform="translate(1348.828125 0)"/>
+   </g>
+  </g>
+  <g id="text_31">
+   <!-- Source: Open-Meteo Historical Weather API (ERA5) -->
+   <g style="fill: #777777" transform="translate(7.2 437.76) scale(0.11 -0.11)">
+    <defs>
+     <path id="AvenirNext-DemiBold-1d" d="M 448 448 
+Q 448 653 598 800 
+Q 749 947 960 947 
+Q 1165 947 1318 806 
+Q 1472 666 1472 461 
+Q 1472 256 1321 109 
+Q 1171 -38 960 -38 
+Q 858 -38 765 0 
+Q 672 38 601 102 
+Q 531 166 489 256 
+Q 448 346 448 448 
+z
+M 448 2611 
+Q 448 2816 598 2963 
+Q 749 3110 960 3110 
+Q 1165 3110 1318 2969 
+Q 1472 2829 1472 2624 
+Q 1472 2419 1321 2272 
+Q 1171 2125 960 2125 
+Q 858 2125 765 2163 
+Q 672 2202 601 2266 
+Q 531 2330 489 2419 
+Q 448 2509 448 2611 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-32" d="M 282 2278 
+Q 282 2822 464 3260 
+Q 646 3699 969 4006 
+Q 1293 4314 1737 4480 
+Q 2182 4646 2707 4646 
+Q 3238 4646 3686 4480 
+Q 4134 4314 4460 4006 
+Q 4787 3699 4969 3260 
+Q 5152 2822 5152 2278 
+Q 5152 1747 4969 1308 
+Q 4787 870 4460 553 
+Q 4134 237 3686 61 
+Q 3238 -115 2707 -115 
+Q 2182 -115 1737 61 
+Q 1293 237 969 553 
+Q 646 870 464 1308 
+Q 282 1747 282 2278 
+z
+M 1158 2278 
+Q 1158 1914 1270 1610 
+Q 1382 1306 1590 1082 
+Q 1798 858 2083 733 
+Q 2368 608 2714 608 
+Q 3059 608 3347 733 
+Q 3635 858 3843 1082 
+Q 4051 1306 4163 1610 
+Q 4275 1914 4275 2278 
+Q 4275 2630 4163 2931 
+Q 4051 3232 3846 3456 
+Q 3642 3680 3354 3808 
+Q 3066 3936 2714 3936 
+Q 2362 3936 2077 3808 
+Q 1792 3680 1587 3456 
+Q 1382 3232 1270 2931 
+Q 1158 2630 1158 2278 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-53" d="M 1197 3072 
+L 1197 2643 
+L 1216 2643 
+Q 1274 2733 1366 2825 
+Q 1459 2918 1593 2992 
+Q 1728 3066 1897 3114 
+Q 2067 3162 2278 3162 
+Q 2605 3162 2880 3037 
+Q 3155 2912 3353 2694 
+Q 3552 2477 3661 2182 
+Q 3770 1888 3770 1549 
+Q 3770 1210 3664 912 
+Q 3558 614 3363 393 
+Q 3168 173 2889 41 
+Q 2611 -90 2259 -90 
+Q 1933 -90 1661 44 
+Q 1389 179 1242 410 
+L 1229 410 
+L 1229 -1536 
+L 461 -1536 
+L 461 3072 
+L 1197 3072 
+z
+M 2989 1549 
+Q 2989 1728 2934 1904 
+Q 2880 2080 2771 2221 
+Q 2662 2362 2496 2448 
+Q 2330 2534 2106 2534 
+Q 1894 2534 1728 2444 
+Q 1562 2355 1443 2214 
+Q 1325 2074 1264 1894 
+Q 1203 1715 1203 1536 
+Q 1203 1357 1264 1181 
+Q 1325 1005 1443 864 
+Q 1562 723 1728 636 
+Q 1894 550 2106 550 
+Q 2330 550 2496 640 
+Q 2662 730 2771 870 
+Q 2880 1011 2934 1190 
+Q 2989 1370 2989 1549 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-10" d="M 1792 1248 
+L 256 1248 
+L 256 1901 
+L 1792 1901 
+L 1792 1248 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-2b" d="M 499 4531 
+L 1306 4531 
+L 1306 2701 
+L 3424 2701 
+L 3424 4531 
+L 4230 4531 
+L 4230 0 
+L 3424 0 
+L 3424 2010 
+L 1306 2010 
+L 1306 0 
+L 499 0 
+L 499 4531 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-3a" d="M 38 4531 
+L 922 4531 
+L 1798 1203 
+L 1811 1203 
+L 2810 4531 
+L 3642 4531 
+L 4621 1203 
+L 4634 1203 
+L 5530 4531 
+L 6387 4531 
+L 5062 0 
+L 4282 0 
+L 3219 3398 
+L 3206 3398 
+L 2144 0 
+L 1363 0 
+L 38 4531 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-24" d="M 1920 4531 
+L 2618 4531 
+L 4570 0 
+L 3648 0 
+L 3226 1037 
+L 1261 1037 
+L 851 0 
+L -51 0 
+L 1920 4531 
+z
+M 2944 1728 
+L 2246 3571 
+L 1536 1728 
+L 2944 1728 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-33" d="M 499 4531 
+L 1978 4531 
+Q 2368 4531 2681 4460 
+Q 2995 4390 3219 4230 
+Q 3443 4070 3564 3820 
+Q 3686 3571 3686 3219 
+Q 3686 2842 3545 2586 
+Q 3405 2330 3165 2173 
+Q 2925 2016 2605 1945 
+Q 2285 1875 1926 1875 
+L 1306 1875 
+L 1306 0 
+L 499 0 
+L 499 4531 
+z
+M 1869 2554 
+Q 2067 2554 2246 2582 
+Q 2426 2611 2566 2684 
+Q 2707 2758 2790 2886 
+Q 2874 3014 2874 3219 
+Q 2874 3418 2790 3542 
+Q 2707 3667 2569 3737 
+Q 2432 3808 2256 3830 
+Q 2080 3853 1894 3853 
+L 1306 3853 
+L 1306 2554 
+L 1869 2554 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-2c" d="M 499 4531 
+L 1306 4531 
+L 1306 0 
+L 499 0 
+L 499 4531 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-b" d="M 230 1843 
+Q 230 2630 476 3353 
+Q 723 4077 1165 4685 
+L 1702 4333 
+Q 1318 3795 1104 3152 
+Q 890 2509 890 1843 
+Q 890 1178 1104 534 
+Q 1318 -109 1702 -646 
+L 1165 -998 
+Q 723 -390 476 333 
+Q 230 1056 230 1843 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-28" d="M 499 4531 
+L 3501 4531 
+L 3501 3827 
+L 1306 3827 
+L 1306 2675 
+L 3386 2675 
+L 3386 1997 
+L 1306 1997 
+L 1306 717 
+L 3616 717 
+L 3616 0 
+L 499 0 
+L 499 4531 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-35" d="M 499 4531 
+L 2074 4531 
+Q 2394 4531 2694 4464 
+Q 2995 4397 3228 4243 
+Q 3462 4090 3603 3840 
+Q 3744 3590 3744 3232 
+Q 3744 2739 3465 2428 
+Q 3187 2118 2707 2010 
+L 3917 0 
+L 2944 0 
+L 1894 1920 
+L 1306 1920 
+L 1306 0 
+L 499 0 
+L 499 4531 
+z
+M 1965 2579 
+Q 2138 2579 2310 2604 
+Q 2483 2630 2620 2700 
+Q 2758 2771 2848 2902 
+Q 2938 3034 2938 3238 
+Q 2938 3424 2854 3542 
+Q 2771 3661 2643 3731 
+Q 2515 3802 2352 3827 
+Q 2189 3853 2035 3853 
+L 1306 3853 
+L 1306 2579 
+L 1965 2579 
+z
+" transform="scale(0.015625)"/>
+     <path id="AvenirNext-DemiBold-c" d="M 1882 1843 
+Q 1882 1056 1635 333 
+Q 1389 -390 947 -998 
+L 410 -646 
+Q 794 -109 1008 534 
+Q 1222 1178 1222 1843 
+Q 1222 2509 1008 3152 
+Q 794 3795 410 4333 
+L 947 4685 
+Q 1389 4077 1635 3353 
+Q 1882 2630 1882 1843 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#AvenirNext-DemiBold-36"/>
+    <use xlink:href="#AvenirNext-DemiBold-52" transform="translate(57.40625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-58" transform="translate(118.40625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(176.609375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-46" transform="translate(211.21875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(260.015625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-1d" transform="translate(317.421875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(347.421875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-32" transform="translate(372.421875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-53" transform="translate(457.328125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(520.625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-51" transform="translate(578.03125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-10" transform="translate(636.234375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-30" transform="translate(668.234375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(760.234375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-57" transform="translate(817.640625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(851.640625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-52" transform="translate(909.046875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(970.046875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-2b" transform="translate(995.046875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4c" transform="translate(1068.953125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-56" transform="translate(1095.75 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-57" transform="translate(1140.15625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-52" transform="translate(1174.15625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(1235.15625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4c" transform="translate(1271.5625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-46" transform="translate(1298.359375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(1347.15625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4f" transform="translate(1402.15625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(1428.953125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3a" transform="translate(1452.75 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(1549.5625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-44" transform="translate(1606.375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-57" transform="translate(1660.375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-4b" transform="translate(1694.375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-48" transform="translate(1752.78125 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-55" transform="translate(1810.1875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(1846.59375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-24" transform="translate(1869.796875 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-33" transform="translate(1940.390625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-2c" transform="translate(2001.390625 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-3" transform="translate(2029.59375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-b" transform="translate(2054.59375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-28" transform="translate(2087.59375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-35" transform="translate(2148.59375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-24" transform="translate(2211.5 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-18" transform="translate(2282.09375 0)"/>
+    <use xlink:href="#AvenirNext-DemiBold-c" transform="translate(2343.09375 0)"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p989bc92c68">
+   <rect x="90.36" y="49.32" width="633.6" height="341.64"/>
+  </clipPath>
+ </defs>
+</svg>
