@@ -81,6 +81,7 @@ Generated data are not committed; final analytical outputs are.
 | 14 | Temperature vs Relative Humidity, August 2026 | CSV |
 | 15 | Hot and Dry Daytime Hours, Summer 2026 | Parquet |
 | 16 | Historical Temperature Anomalies, 2025 | JSON |
+| 17 | Longest Freezing Streak, Winter 2025 | SQL |
 
 ## Reproducing an Exercise
 
