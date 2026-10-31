@@ -1,0 +1,58 @@
+# AWF practice-selection probabilities: pedagogical weights, NOT real-world prevalence.
+# Formats are equally likely when all four are available. Unavailable formats
+# (such as SQL without a safe practice connection) are excluded and the rest
+# renormalized. The condition table is conditional on the selected format.
+# All listed tables must sum to 100.
+
+[formats]
+csv = 25
+parquet = 25
+json = 25
+sql = 25
+
+[conditions.csv]
+none = 30
+missing_values = 14
+missing_records = 14
+duplicates = 14
+invalid_values = 14
+representation = 14
+
+[conditions.parquet]
+none = 32
+missing_values = 17
+missing_records = 17
+duplicates = 17
+invalid_values = 17
+
+[conditions.json]
+none = 32
+missing_values = 17
+missing_records = 17
+duplicates = 17
+invalid_values = 17
+structure = 0  # Recognized by the selection schema, unsupported for real generation.
+
+[conditions.sql]
+none = 32
+missing_values = 17
+missing_records = 17
+duplicates = 17
+invalid_values = 17
+
+# Subtypes are approximately equal when applicable. A "mixed" subtype is
+# distinct from the fixed within-family row-placement policy.
+[variants.duplicates]
+exact = 34
+conflicting = 33
+mixed = 33
+
+[variants.invalid_values]
+out_of_bounds = 34
+scaled = 33
+mixed = 33
+
+[variants.representation]
+numeric_suffix = 34
+sentinel = 33
+mixed = 33

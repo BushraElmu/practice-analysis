@@ -222,7 +222,15 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-**/data/**
+# Generated practice data
+**/data/*
 !**/data/.gitkeep
 
+# Local archives
 **/archive/**
+
+# Personal just recipes
+personal.just
+
+# Private generation records
+.awf/

@@ -1,0 +1,10 @@
+# Shared default for both `just setup` and `just sql-sync`.
+# Normal practice default: complete calendar year 2025 (Calgary local time).
+[source]
+provider = "open-meteo-ERA5"
+latitude = 51.0447
+longitude = -114.0719
+timezone = "America/Edmonton"
+start_local = "2025-01-01"
+end_local = "2026-01-01" # exclusive; override per exercise as appropriate
+columns = ["time", "wind_speed_10m", "wind_direction_10m", "temperature_2m", "cloud_cover", "relative_humidity_2m", "shortwave_radiation"]
