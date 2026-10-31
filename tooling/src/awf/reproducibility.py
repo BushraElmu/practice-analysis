@@ -63,6 +63,12 @@ def real_reproduction_toml(directory: Path, fmt: str, *, sql_output_sha256: str 
     }
     with (directory / "practice.toml").open("rb") as handle:
         manifest = tomllib.load(handle)
+    # Profile rules affect newly generated feature-aware exercises. Legacy
+    # records predate this module and retain their original fingerprint scheme.
+    if "dirty_vars" in manifest.get("requested", {}):
+        values["feature_profiles_sha256"] = sha256(
+            Path(__file__).with_name("feature_profiles.py")
+        )
     values["configuration_sha256"] = _config_hash(manifest)
     return "\n[reproduction]\nmethod = \"openmeteo-weather-v1\"\n" + "".join(
         f'{key} = "{value}"\n' for key, value in values.items() if value is not None
@@ -92,6 +98,8 @@ def verify_real(directory: Path, details: dict) -> dict[str, object]:
                       ('conditions.py', 'condition_adapter_sha256')]
     if fmt == 'sql':
         adapter_hashes.append(('sql_adapter.py', 'sql_adapter_sha256'))
+    if 'feature_profiles_sha256' in config:
+        adapter_hashes.append(('feature_profiles.py', 'feature_profiles_sha256'))
     implementation_matches = all(
         sha256(Path(__file__).with_name(name)) == config.get(key)
         for name, key in adapter_hashes

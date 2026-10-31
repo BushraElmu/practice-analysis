@@ -17,6 +17,7 @@ from .reproducibility import reproduction_toml, real_reproduction_toml
 from .conditions import CAPABILITIES
 from .sql_safety import practice_schema
 from . import real
+from .feature_profiles import parse_dirty_vars, select_target, condition_options
 
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*\Z")
 
@@ -32,7 +33,9 @@ def _quote(value: str) -> str:
 
 def _practice_toml(number: int, slug: str, date_str: str, choice: Choice, *,
                    variant: str | None = None, requested_variant: str | None = None,
-                   variant_weights: dict[str,int] | None = None) -> str:
+                   variant_weights: dict[str,int] | None = None,
+                   requested_dirty_vars: tuple[str, ...] | None = None,
+                   selected_target: str | None = None) -> str:
     fmt_weights = "\n".join(f"{k} = {v}" for k, v in choice.format_weights.items())
     cond_weights = "\n".join(f"{k} = {v}" for k, v in choice.condition_weights.items())
     return (
@@ -50,11 +53,13 @@ def _practice_toml(number: int, slug: str, date_str: str, choice: Choice, *,
         f"dirty = {_quote(choice.requested_dirty)}\n"
         f"seed_source = {_quote(choice.seed_source)}\n"
         + (f'requested_variant = {_quote(requested_variant)}\n' if requested_variant is not None else '')
+        + (f'dirty_vars = [{", ".join(_quote(x) for x in requested_dirty_vars)}]\n' if requested_dirty_vars is not None else '')
         + "\n[resolved]\n"
         + f"format = {_quote(choice.format)}\n"
         + f"dirty = {_quote(choice.dirty)}\n"
         + f'seed = "{choice.seed:06d}"\n'
         + (f'variant = {_quote(variant)}\n' if variant is not None else '')
+        + (f'target = {_quote(selected_target)}\n' if selected_target is not None else '')
         + "\n[selection_snapshot.formats]\n"
         + f"{fmt_weights}\n"
         + f"\n[selection_snapshot.conditions.{choice.format}]\n"
@@ -138,22 +143,28 @@ if __name__ == "__main__":
 
 
 def _real_practice_addendum(start: str, end: str, *, condition: str,
-                            defaults_path: Path | None = None) -> str:
+                            defaults_path: Path | None = None,
+                            selected_target: str | None = None,
+                            feature_aware: bool = False) -> str:
     """Render a frozen source specification and the existing weather-specific defaults."""
     from .source import source_spec
     source = source_spec(start, end, config_path=defaults_path)
-    options = {
-        'target': 'temperature_2m' if condition == 'invalid_values' else 'wind_speed_10m',
-        'min_rate': 0.01, 'max_rate': 0.03,
-        'placement': 'mixed', 'groups': 3, 'grouped_share': 0.70,
-    }
-    if condition == 'duplicates':
-        options.update(conflict_column='temperature_2m', conflict_offset=1.5, conflict_share=0.50)
-    elif condition == 'invalid_values':
-        options.update(valid_min=-60.0, valid_max=60.0, outside_margin=10.0,
-                       scale_factor=2.0, bounds_share=0.50)
-    elif condition == 'representation':
-        options.update(numeric_suffix=' km/h', sentinel='not_recorded')
+    if feature_aware:
+        options = condition_options(condition, selected_target)
+    else:
+        # Preserve exact legacy generation settings when --dirty-vars is omitted.
+        options = {
+            'target': 'temperature_2m' if condition == 'invalid_values' else 'wind_speed_10m',
+            'min_rate': 0.01, 'max_rate': 0.03,
+            'placement': 'mixed', 'groups': 3, 'grouped_share': 0.70,
+        }
+        if condition == 'duplicates':
+            options.update(conflict_column='temperature_2m', conflict_offset=1.5, conflict_share=0.50)
+        elif condition == 'invalid_values':
+            options.update(valid_min=-60.0, valid_max=60.0, outside_margin=10.0,
+                           scale_factor=2.0, bounds_share=0.50)
+        elif condition == 'representation':
+            options.update(numeric_suffix=' km/h', sentinel='not_recorded')
 
     def literal(value):
         if isinstance(value, str):
@@ -215,7 +226,7 @@ def setup(
     number: int | None = None, date_str: str | None = None,
     scaffold_only: bool = False, mode: str = "weather",
     fixture: Path | None = None, blind: bool = False, start_local: str | None = None,
-    end_local: str | None = None,
+    end_local: str | None = None, dirty_vars: str | None = None,
 ) -> Path:
     root = root.resolve()
     if not SLUG.fullmatch(slug):
@@ -231,6 +242,8 @@ def setup(
     number = next_number(root, number)
     if mode not in ("mock", "weather"):
         raise SetupError("mode must be 'mock' or 'weather'")
+    if mode == "mock" and dirty_vars is not None:
+        raise SetupError("--dirty-vars is only available for real weather generation")
     if mode == "mock" and blind:
         raise SetupError("--blind requires real weather data")
     if mode == "mock" and variant != "random":
@@ -243,6 +256,7 @@ def setup(
         source = source_spec(start_local, end_local,
                              config_path=policy_path.parent / "weather_defaults.toml")
         start_local, end_local = source['start_local'], source['end_local']
+        dirty_pool = parse_dirty_vars(dirty_vars, source['columns'])
         # A format is eligible only if its real adapter can run in this environment.
         import importlib.util
         from . import sql_adapter
@@ -259,6 +273,11 @@ def setup(
         resolve_variant(policy_path, condition=choice.dirty, fmt=choice.format,
                         seed=choice.seed, requested_variant=variant)
         if mode == "weather" else (None, {})
+    )
+
+    selected_target = (
+        select_target(choice.seed, choice.format, choice.dirty, selected_variant, dirty_pool)
+        if mode == 'weather' and dirty_pool is not None else None
     )
 
     # Before publishing a SQL folder, establish the selected interval really
@@ -284,9 +303,13 @@ def setup(
             _practice_toml(number, slug, date_str, choice,
                            variant=selected_variant,
                            requested_variant=variant if mode == "weather" else None,
-                           variant_weights=variant_weights) +
+                           variant_weights=variant_weights,
+                           requested_dirty_vars=dirty_pool if mode == 'weather' else None,
+                           selected_target=selected_target) +
             (_real_practice_addendum(start_local, end_local, condition=choice.dirty,
-                                         defaults_path=policy_path.parent / "weather_defaults.toml")
+                                         defaults_path=policy_path.parent / "weather_defaults.toml",
+                                         selected_target=selected_target,
+                                         feature_aware=dirty_pool is not None)
              if mode == "weather" else ""), encoding="utf-8")
         if mode == "weather":
             with (staged / "practice.toml").open("a", encoding="utf-8") as manifest:

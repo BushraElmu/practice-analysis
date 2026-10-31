@@ -27,11 +27,12 @@ def repository_root(start: Path | None = None) -> Path:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="awf", description="AWF weather setup, variant selection and isolated reproduction")
     sub = parser.add_subparsers(dest="command", required=True)
-    prep = sub.add_parser("setup", help="Create a dated real-weather practice (small window by default)")
+    prep = sub.add_parser("setup", help="Create a dated real-weather practice (source defaults from weather_defaults.toml)")
     prep.add_argument("name", help="lowercase hyphenated practice name")
     prep.add_argument("--format", default="random", dest="fmt")
     prep.add_argument("--dirty", default="random")
     prep.add_argument("--variant", default="random", help="weighted subtype of selected dirtiness family; or request one explicitly")
+    prep.add_argument("--dirty-vars", help="one eligible corruption target, or a comma-separated OR pool (one selected); no effect on whole-row conditions")
     prep.add_argument("--seed", type=int, help="integer 000000 through 999999; automatically generated if omitted")
     prep.add_argument("--number", type=int, help="optional explicit practice number")
     prep.add_argument("--blind", action="store_true", help="conceal the resolved condition in a gitignored private record (not adversarial secrecy)")
@@ -93,6 +94,7 @@ def main(argv: list[str] | None = None) -> int:
                 date_str=args.date_str, mode="mock" if args.mock else "weather",
                 fixture=args.fixture.resolve() if args.fixture else None,
                 start_local=args.start, end_local=args.end,
+                dirty_vars=args.dirty_vars,
             )
             print(f"Practice created: {path}")
             print("Registry updated: practices.toml")

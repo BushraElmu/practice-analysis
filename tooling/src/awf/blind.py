@@ -87,4 +87,5 @@ def reveal(directory: Path, *, publish: bool = False) -> dict:
     return {'id':config['id'], 'format':config['resolved']['format'],
             'condition':config['resolved']['dirty'],
             'variant':config['resolved'].get('variant', 'none'),
-            'seed': config['resolved']['seed']}
+            'seed': config['resolved']['seed'],
+            **({'target': config['resolved']['target']} if 'target' in config['resolved'] else {})}

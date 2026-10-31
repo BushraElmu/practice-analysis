@@ -98,6 +98,27 @@ Git-ignored. **A fresh clone cannot necessarily verify or byte-for-byte
 reconstruct an older generated practice** without those preserved local
 artifacts. Retain local snapshots if long-term reproduction matters.
 
+### Feature-aware corruption targets
+
+Optionally restrict which measurements may be changed by a **field-targeted**
+condition:
+
+```sh
+just setup wind-comparison --blind \
+  --dirty-vars wind_speed_10m,wind_direction_10m
+```
+
+The comma-separated values form an **OR pool**: AWF chooses one compatible
+measurement using a deterministic seed. They do not request two simultaneous
+corruptions. Without the flag, the original V2.1 targeting remains unchanged.
+Whole-record conditions (`missing_records`, exact duplicates) act on records,
+not one chosen field; clean is still selectable under the normal probabilities.
+Only the six existing numeric weather measurements are supported as targets.
+Invalid-value ranges are training thresholds, not universal physical limits.
+The resolved target is private until `just reveal N` when using `--blind`.
+Source columns are still fixed by the existing seven-column generator;
+`--dirty-vars` does not add or remove supplied fields.
+
 The currently supported generated weather fields are `time`,
 `wind_speed_10m`, `wind_direction_10m`, `temperature_2m`, `cloud_cover`,
 `relative_humidity_2m`, and `shortwave_radiation`. The original historical

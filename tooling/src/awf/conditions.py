@@ -119,11 +119,11 @@ def apply(value, *, fmt: str, kind: str, seed: int, source: dict,
         if pd.Index(times).has_duplicates:
             raise ValueError("Original source contains duplicate timestamps")
         conflict_column = cfg.get("conflict_column", "temperature_2m")
-        if conflict_column == "time":
-            raise ValueError("Cannot modify duplicate keys")
-        if conflict_column not in (hourly if fmt == "json" else dirty.columns):
-            raise ValueError("Duplicate conflict column missing")
         if variant != "exact":
+            if conflict_column == "time":
+                raise ValueError("Cannot modify duplicate keys")
+            if conflict_column not in (hourly if fmt == "json" else dirty.columns):
+                raise ValueError("Duplicate conflict column missing")
             values = hourly[conflict_column] if fmt == "json" else dirty[conflict_column].tolist()
             eligible = [i for i in eligible if pd.notna(values[i]) and
                         isinstance(values[i], (int, float)) and not isinstance(values[i], bool)]
@@ -191,6 +191,13 @@ def apply(value, *, fmt: str, kind: str, seed: int, source: dict,
                 selected = rng.sample(range(count), k=n_conflict)
                 if not pd.api.types.is_numeric_dtype(copies[conflict_column]):
                     raise ValueError("Duplicate conflict field must be numeric")
+                # Pandas 2.2 warns when fractional values are written into an
+                # integer column; later versions may reject the assignment.
+                # Promote only when needed, retaining integer output for
+                # integer-preserving operations and legacy configurations.
+                if (pd.api.types.is_integer_dtype(copies[conflict_column])
+                        and not float(offset).is_integer()):
+                    copies[conflict_column] = copies[conflict_column].astype("float64")
                 copies.loc[selected, conflict_column] += offset
             dirty = (pd.concat([dirty, copies], ignore_index=True)
                      .sort_values("time", kind="stable").reset_index(drop=True))
@@ -205,6 +212,9 @@ def apply(value, *, fmt: str, kind: str, seed: int, source: dict,
         n_bounds = (count if variant == "out_of_bounds" else 0 if variant == "scaled"
                     else max(1, min(count - 1, round(count * share))))
         bound_indices = set(rng.sample(indices, k=n_bounds))
+        # Resolve all values in the same RNG order before assignment. This
+        # allows targeted dtype promotion without changing sampled errors.
+        assignments = []
         for idx in indices:
             old = target_values[idx]
             if idx in bound_indices:
@@ -214,6 +224,11 @@ def apply(value, *, fmt: str, kind: str, seed: int, source: dict,
                 changed = float(old) * scale
             if changed == old:
                 raise AssertionError("Chosen error failed to modify measurement")
+            assignments.append((idx, changed))
+        if (fmt != "json" and pd.api.types.is_integer_dtype(dirty[target])
+                and any(not float(changed).is_integer() for _, changed in assignments)):
+            dirty[target] = dirty[target].astype("float64")
+        for idx, changed in assignments:
             if fmt == "json":
                 hourly[target][idx] = changed
             else:

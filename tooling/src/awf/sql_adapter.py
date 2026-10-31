@@ -177,7 +177,8 @@ def _choose_keys(conn, target, *, source, cfg, seed, kind):
     _, sql = _driver()
     a,b = _bounds(source)
     target_col = cfg['target']
-    if target_col not in MEASUREMENTS:
+    row_level = kind == 'missing_records' or (kind == 'duplicates' and cfg.get('_variant') == 'exact')
+    if target_col not in MEASUREMENTS and not (row_level and target_col == 'time'):
         raise SQLSetupError('Corruption target is not an allowed weather measurement')
     # Restrict to observations usable by that mutation, preserving archive eligibility.
     rows=conn.execute(sql.SQL('SELECT time, {} FROM {} WHERE time >= %s AND time < %s ORDER BY time').format(
@@ -187,7 +188,7 @@ def _choose_keys(conn, target, *, source, cfg, seed, kind):
     if kind=='missing_values' and any(v is None for _,v in rows):
         raise SQLSetupError('Target already contains missing values')
     eligible=[(t,v) for t,v in rows if v is not None]
-    if kind=='duplicates' and cfg.get('conflict_column') in MEASUREMENTS:
+    if kind=='duplicates' and cfg.get('_variant') != 'exact' and cfg.get('conflict_column') in MEASUREMENTS:
         # Conflicting duplicates need a measurement that can actually be changed.
         # Match the source-facing file adapter's eligibility restriction.
         conflict=conn.execute(sql.SQL('SELECT time, {} FROM {} WHERE time >= %s AND time < %s').format(
