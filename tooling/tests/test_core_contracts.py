@@ -4,9 +4,12 @@ These tests do not contact Open-Meteo or PostgreSQL and do not need private
 practice records. They are deliberately not a substitute for full acceptance.
 """
 
+import tomllib
 from pathlib import Path
 
 import pytest
+
+import awf
 
 from awf.feature_profiles import parse_dirty_vars, select_target
 from awf.registry import catalog, render_index
@@ -77,6 +80,32 @@ def test_mock_setup_verifies_without_overwriting_analyst_edits(tmp_path):
     assert result["reconstructed_matches"] is True
     assert result["current_matches"] is False
     assert analyst_file.read_text(encoding="utf-8") == "analyst changed this file\n"
+
+
+def test_mock_scaffold_keeps_required_directories_without_placeholders(tmp_path):
+    (tmp_path / "tooling").mkdir()
+    (tmp_path / "tooling" / "selection.toml").write_bytes(POLICY.read_bytes())
+
+    practice = setup(
+        root=tmp_path,
+        slug="directory-contract",
+        policy_path=tmp_path / "tooling" / "selection.toml",
+        fmt="json", dirty="none", seed=22,
+        mode="mock", scaffold_only=True,
+        date_str="2026-11-04",
+    )
+
+    for folder in ("data", "outputs"):
+        assert (practice / folder).is_dir()
+        assert not (practice / folder / ".gitkeep").exists()
+
+    assert (practice / "data" / "weather.csv").is_file()
+    assert verify(practice)["reconstructed_matches"] is True
+
+
+def test_package_version_matches_project_metadata():
+    project = tomllib.loads((ROOT / "tooling" / "pyproject.toml").read_text(encoding="utf-8"))
+    assert awf.__version__ == project["project"]["version"]
 
 
 def test_setup_rejects_unsafe_slug_without_writing_files(tmp_path):

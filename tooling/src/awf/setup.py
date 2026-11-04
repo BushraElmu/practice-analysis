@@ -293,8 +293,6 @@ def setup(
         staged.mkdir()
         (staged / "data").mkdir()
         (staged / "outputs").mkdir()
-        (staged / "data" / ".gitkeep").touch()
-        (staged / "outputs" / ".gitkeep").touch()
         (staged / "prepare_data.py").write_text(
             _script_prepare(choice.format) if mode == "mock" else _script_wrapper("prepare"), encoding="utf-8")
         (staged / "dirty_data.py").write_text(
