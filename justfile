@@ -33,3 +33,8 @@ reveal practice *options:
 # Explicit maintenance task. Never run automatically during practice setup.
 sql-sync *options:
     uv run --no-editable --project tooling awf sql-sync "$@"
+
+# Rebuild the non-editable tooling package before testing latest source edits.
+test-tooling:
+    uv sync --project tooling --locked --no-editable --reinstall-package awf-tooling
+    uv run --project tooling --locked --no-editable python -m pytest tooling/tests -q -ra
