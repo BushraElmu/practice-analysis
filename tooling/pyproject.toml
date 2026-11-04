@@ -9,6 +9,9 @@ description = "AWF weather practice tooling and isolated PostgreSQL adapters"
 requires-python = ">=3.11"
 dependencies = ["pandas>=2.2,<3", "requests>=2.31", "pyarrow>=16", "psycopg[binary]>=3.2"]
 
+[dependency-groups]
+dev = ["pytest>=8,<10"]
+
 [project.scripts]
 awf = "awf.cli:main"
 

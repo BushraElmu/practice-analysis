@@ -18,6 +18,21 @@ just list
 
 Each practice has its own `pyproject.toml`, lockfile, and local venv. The repository root is not a Python package. The root `justfile` provides all essential commands.
 
+### Test the shared tooling
+
+After changes to `tooling/src/awf/`, rebuild the non-editable package before
+running tests so Python executes the updated implementation, not an older
+installed copy:
+
+```sh
+just test-tooling
+```
+
+The tests use isolated temporary directories and do not require live
+Open-Meteo requests, a PostgreSQL connection, or private practice records.
+They are an initial regression baseline, not the full historical acceptance
+suite. CI and a separately installed wheel check are planned next.
+
 ### SQL 
 
 (FIX)
