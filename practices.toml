@@ -204,3 +204,15 @@ featured = false
 linked = false
 origin = "historical-ledger"
 note = "Actual P18; originally planned as P19. Percent-suffixed cloud-cover measurements."
+
+[[practices]]
+id = 19
+title = "Wind Speed By Direction 2025"
+status = "in-progress"
+family = "unclassified"
+format = "json"
+condition = "undisclosed"
+featured = false
+linked = true
+origin = "practice.toml"
+path = "2026-11-03_wind-speed-by-direction-2025"

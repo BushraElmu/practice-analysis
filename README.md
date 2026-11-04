@@ -95,8 +95,7 @@ The currently supported generated weather fields are `time`, `wind_speed_10m`, `
 | 16 | Historical Temperature Anomalies, 2025 | JSON |
 | 17 | Longest Freezing Streak, Winter 2025 | SQL |
 | 18 | Solar Radiation by Cloud-Cover Band, June 2025 | CSV |
-
-Deliberate data corruption began with Practice 14. Existing historical preparation scripts and notebooks are preserved as written.
+| 19 | Wind Speed by Direction, 2025 | JSON |
 
 ## Data and license
 
