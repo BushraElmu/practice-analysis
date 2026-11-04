@@ -31,7 +31,21 @@ just test-tooling
 The tests use isolated temporary directories and do not require live
 Open-Meteo requests, a PostgreSQL connection, or private practice records.
 They are an initial regression baseline, not the full historical acceptance
-suite. CI and a separately installed wheel check are planned next.
+suite.
+
+### Automated validation
+
+The GitHub Actions workflow in `.github/workflows/ci.yml` runs on pull
+requests to `main`, pushes to `main`, and manual dispatch. On a clean
+Ubuntu runner with Python 3.11, it installs the locked, non-editable
+tooling package, runs the offline regression tests, builds a wheel, and
+smoke-tests that wheel outside the source checkout. The regression suite
+also checks that the committed `practices.toml` matches its source
+manifests.
+
+CI does not use live Open-Meteo data, PostgreSQL credentials, private
+`.awf` records, or existing practice notebooks. Passing CI establishes
+these tested contracts, not complete historical-practice reproduction.
 
 ### SQL 
 

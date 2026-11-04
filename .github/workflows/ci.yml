@@ -1,0 +1,51 @@
+name: AWF tooling CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tooling:
+    name: Ubuntu / Python 3.11
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up uv and Python
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: "0.12.6"
+          python-version: "3.11"
+          enable-cache: true
+
+      - name: Install locked tooling and test dependencies
+        run: uv sync --project tooling --locked --no-editable --group dev
+
+      - name: Run offline regression tests
+        run: uv run --project tooling --locked --no-editable --group dev python -m pytest tooling/tests -q -ra
+
+      - name: Build wheel
+        run: uv build tooling --wheel --out-dir "$RUNNER_TEMP/awf-dist"
+
+      - name: Smoke-test installed wheel outside source checkout
+        shell: bash
+        run: |
+          wheel="$(find "$RUNNER_TEMP/awf-dist" -maxdepth 1 -name 'awf_tooling-*.whl' -type f -print -quit)"
+          test -n "$wheel"
+
+          cd "$RUNNER_TEMP"
+          uv run --isolated --no-project --with "$wheel" -- awf --help
+
+          cd "$GITHUB_WORKSPACE"
+          uv run --isolated --no-project --with "$wheel" -- awf list
