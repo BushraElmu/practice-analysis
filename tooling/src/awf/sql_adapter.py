@@ -22,8 +22,8 @@ from . import weather
 
 CANONICAL = 'canonical'
 TABLE = 'weather_hourly'
-COLUMNS = tuple(weather.COLUMNS)
-MEASUREMENTS = COLUMNS[1:]
+# Each practice pins the source column set in its manifest. Never use the
+# current defaults when reading or reconstructing an earlier SQL practice.
 
 
 class SQLSetupError(ValueError):
@@ -51,7 +51,7 @@ def connection(*, maintenance: bool = False):
         raise SQLSetupError(f'PostgreSQL connection via {variable} failed: {exc.__class__.__name__}') from exc
 
 
-def available() -> bool:
+def available(*, required_columns: tuple[str, ...] | list[str] | None = None) -> bool:
     """Check connection, canonical existence, and practice permissions (not date coverage).
 
     The full requested window is validated when the practice is built, not
@@ -66,7 +66,8 @@ def available() -> bool:
             readable=bool(conn.execute("SELECT has_schema_privilege(current_user, 'canonical', 'USAGE') AND has_table_privilege(current_user, 'canonical.weather_hourly', 'SELECT')").fetchone()[0])
             if not (ready and permitted and readable and not _canonical_writable(conn)):
                 return False
-            return True
+            return (required_columns is None or
+                    set(required_columns).issubset(_canonical_columns(conn)))
     except Exception:
         return False
 
@@ -93,9 +94,26 @@ def _bounds(source):
     return a.to_pydatetime(), b.to_pydatetime()
 
 
-def _columns_sql():
+def _columns_sql(columns):
     _, sql = _driver()
-    return sql.SQL(', ').join(sql.Identifier(c) for c in COLUMNS)
+    return sql.SQL(', ').join(sql.Identifier(c) for c in columns)
+
+
+def _canonical_columns(conn) -> set[str]:
+    rows = conn.execute("""SELECT column_name FROM information_schema.columns
+                           WHERE table_schema = %s AND table_name = %s""",
+                        (CANONICAL, TABLE)).fetchall()
+    return {name for (name,) in rows}
+
+
+def _require_canonical_columns(conn, source):
+    missing = set(source['columns']) - _canonical_columns(conn)
+    if missing:
+        raise SQLSetupError(
+            f'Canonical table is missing required columns: {sorted(missing)}. '
+            'AWF will not silently migrate or overwrite canonical data. '
+            'Inspect and explicitly maintain canonical.weather_hourly first.'
+        )
 
 
 def _canonical_identifier():
@@ -118,6 +136,7 @@ def require_coverage(source) -> None:
     """
     with connection() as conn:
         _require_safe_practice_role(conn)
+        _require_canonical_columns(conn, source)
         _, sql = _driver()
         start, end = _bounds(source)
         # Transfer only timestamps for this read-only prerequisite check.
@@ -129,35 +148,37 @@ def require_coverage(source) -> None:
 
 def canonical_rows(conn, source):
     _, sql = _driver()
+    _require_canonical_columns(conn, source)
     a,b = _bounds(source)
     rows = conn.execute(sql.SQL('SELECT {} FROM {} WHERE time >= %s AND time < %s ORDER BY time').format(
-        _columns_sql(), _canonical_identifier()), (a,b)).fetchall()
+        _columns_sql(source['columns']), _canonical_identifier()), (a,b)).fetchall()
     _check_coverage(rows, source)
     return rows
 
 
 def _document(rows, source):
     hourly = {'time': [int(pd.Timestamp(r[0]).timestamp()) for r in rows]}
-    for j, name in enumerate(MEASUREMENTS, 1):
+    for j, name in enumerate(source['columns'][1:], 1):
         hourly[name] = [None if r[j] is None else float(r[j]) for r in rows]
     units = {'time':'unixtime', 'wind_speed_10m':'km/h', 'wind_direction_10m':'°',
              'temperature_2m':'°C', 'cloud_cover':'%', 'relative_humidity_2m':'%',
-             'shortwave_radiation':'W/m²'}
+             'shortwave_radiation':'W/m²', 'precipitation':'mm', 'snowfall':'cm',
+             'dew_point_2m':'°C', 'surface_pressure':'hPa'}
     return weather.validate({'latitude':source['latitude'], 'longitude':source['longitude'],
         'timezone':'GMT', 'utc_offset_seconds':0,
-        'hourly_units':{c: units.get(c,'') for c in COLUMNS}, 'hourly':hourly}, source)
+        'hourly_units':{c: units.get(c,'') for c in source['columns']}, 'hourly':hourly}, source)
 
 
 def source_snapshot(conn, source):
     return _document(canonical_rows(conn, source), source)
 
 
-def _list_rows(conn, target):
+def _list_rows(conn, target, columns):
     _, sql = _driver()
-    # Sort by *every* field so duplicate timestamps have stable logical order.
-    order = sql.SQL(', ').join(sql.SQL('{} NULLS FIRST').format(sql.Identifier(c)) for c in COLUMNS)
+    # Sort by the FROZEN columns; old practices may have fewer than new defaults.
+    order = sql.SQL(', ').join(sql.SQL('{} NULLS FIRST').format(sql.Identifier(c)) for c in columns)
     return conn.execute(sql.SQL('SELECT {} FROM {} ORDER BY {}').format(
-        _columns_sql(), target, order)).fetchall()
+        _columns_sql(columns), target, order)).fetchall()
 
 
 def _normalize(rows):
@@ -178,7 +199,7 @@ def _choose_keys(conn, target, *, source, cfg, seed, kind):
     a,b = _bounds(source)
     target_col = cfg['target']
     row_level = kind == 'missing_records' or (kind == 'duplicates' and cfg.get('_variant') == 'exact')
-    if target_col not in MEASUREMENTS and not (row_level and target_col == 'time'):
+    if target_col not in source['columns'][1:] and not (row_level and target_col == 'time'):
         raise SQLSetupError('Corruption target is not an allowed weather measurement')
     # Restrict to observations usable by that mutation, preserving archive eligibility.
     rows=conn.execute(sql.SQL('SELECT time, {} FROM {} WHERE time >= %s AND time < %s ORDER BY time').format(
@@ -188,7 +209,7 @@ def _choose_keys(conn, target, *, source, cfg, seed, kind):
     if kind=='missing_values' and any(v is None for _,v in rows):
         raise SQLSetupError('Target already contains missing values')
     eligible=[(t,v) for t,v in rows if v is not None]
-    if kind=='duplicates' and cfg.get('_variant') != 'exact' and cfg.get('conflict_column') in MEASUREMENTS:
+    if kind=='duplicates' and cfg.get('_variant') != 'exact' and cfg.get('conflict_column') in source['columns'][1:]:
         # Conflicting duplicates need a measurement that can actually be changed.
         # Match the source-facing file adapter's eligibility restriction.
         conflict=conn.execute(sql.SQL('SELECT time, {} FROM {} WHERE time >= %s AND time < %s').format(
@@ -234,7 +255,7 @@ def mutate(conn, *, schema, number, config, verify=False):
     elif kind=='duplicates':
         if variant not in ('exact','conflicting','mixed'):
             raise SQLSetupError('Unrecognized duplicate variant')
-        if cfg['conflict_column'] not in MEASUREMENTS:
+        if cfg['conflict_column'] not in source['columns'][1:]:
             raise SQLSetupError('Duplicate conflict column invalid')
         if variant!='exact':
             original=conn.execute(sql.SQL('SELECT time, {} FROM {} WHERE time = ANY(%s)').format(
@@ -247,14 +268,14 @@ def mutate(conn, *, schema, number, config, verify=False):
             raise SQLSetupError('Mixed duplicates require at least two rows')
         conflicting=rng.sample(times,k=nconf)
         copies=[]
-        for col in COLUMNS:
+        for col in source['columns']:
             identifier=sql.Identifier(col)
             if col==cfg['conflict_column'] and nconf:
                 copies.append(sql.SQL('CASE WHEN time = ANY(%s) THEN {} + %s ELSE {} END').format(identifier,identifier))
             else:
                 copies.append(identifier)
         query=sql.SQL('INSERT INTO {} ({}) SELECT {} FROM {} WHERE time = ANY(%s) RETURNING time').format(
-            target,_columns_sql(),sql.SQL(', ').join(copies),target)
+            target,_columns_sql(source['columns']),sql.SQL(', ').join(copies),target)
         params=((conflicting,cfg['conflict_offset']) if nconf else ())+(times,)
         result=conn.execute(query,params).fetchall()
     else:
@@ -298,9 +319,9 @@ def build(directory: Path):
         conn.execute(sql.SQL('CREATE SCHEMA {}').format(sql.Identifier(schema)))
         a,b=_bounds(source)
         conn.execute(sql.SQL('CREATE TABLE {} AS SELECT {} FROM {} WHERE time >= %s AND time < %s').format(
-            sql.Identifier(schema,TABLE),_columns_sql(),_canonical_identifier()),(a,b))
+            sql.Identifier(schema,TABLE),_columns_sql(source['columns']),_canonical_identifier()),(a,b))
         details=mutate(conn,schema=schema,number=number,config=config)
-        rows=_list_rows(conn,sql.Identifier(schema,TABLE))
+        rows=_list_rows(conn,sql.Identifier(schema,TABLE),source['columns'])
         out_hash=logical_hash(rows)
     snapshot=directory / SNAPSHOT
     weather.write_snapshot(doc, snapshot)
@@ -321,17 +342,18 @@ def verify(config, snapshot: Path):
         conn.execute(sql.SQL('CREATE TEMP TABLE {} (LIKE {} ) ON COMMIT DROP').format(
             sql.Identifier(temp),_canonical_identifier()))
         query=sql.SQL('INSERT INTO {} ({}) VALUES ({})').format(
-            sql.Identifier('pg_temp',temp),_columns_sql(),sql.SQL(', ').join(sql.Placeholder() for _ in COLUMNS))
+            sql.Identifier('pg_temp',temp),_columns_sql(source['columns']),
+            sql.SQL(', ').join(sql.Placeholder() for _ in source['columns']))
         data=[]
-        for values in frame[list(COLUMNS)].itertuples(index=False,name=None):
+        for values in frame[list(source['columns'])].itertuples(index=False,name=None):
             data.append(tuple(v.to_pydatetime() if isinstance(v,pd.Timestamp) else
                               None if pd.isna(v) else float(v) for v in values))
         with conn.cursor() as cur:
             cur.executemany(query,data)
         mutate(conn,schema='pg_temp',number=number,config=config,verify=True)
-        candidate=logical_hash(_list_rows(conn,sql.Identifier('pg_temp',temp)))
+        candidate=logical_hash(_list_rows(conn,sql.Identifier('pg_temp',temp),source['columns']))
         exists=conn.execute('SELECT to_regclass(%s)',(f'{schema}.{TABLE}',)).fetchone()[0]
-        current=logical_hash(_list_rows(conn,sql.Identifier(schema,TABLE))) if exists else None
+        current=logical_hash(_list_rows(conn,sql.Identifier(schema,TABLE),source['columns'])) if exists else None
         conn.rollback()  # No persistent DDL or data changes; explicit, even on success.
     return candidate,current
 
@@ -342,8 +364,9 @@ def sync_canonical(source, *, fixture: Path | None = None):
     with connection(maintenance=True) as conn:
         conn.execute(sql.SQL('CREATE SCHEMA IF NOT EXISTS {}').format(sql.Identifier(CANONICAL)))
         column_types=sql.SQL(', ').join([sql.SQL('time TIMESTAMPTZ PRIMARY KEY')] + [
-            sql.SQL('{} DOUBLE PRECISION').format(sql.Identifier(c)) for c in MEASUREMENTS])
+            sql.SQL('{} DOUBLE PRECISION').format(sql.Identifier(c)) for c in source['columns'][1:]])
         conn.execute(sql.SQL('CREATE TABLE IF NOT EXISTS {} ({})').format(_canonical_identifier(),column_types))
+        _require_canonical_columns(conn, source)
         a,b=_bounds(source)
         existing=conn.execute(sql.SQL('SELECT time FROM {} WHERE time >= %s AND time < %s ORDER BY time').format(
             _canonical_identifier()),(a,b)).fetchall()
@@ -356,9 +379,10 @@ def sync_canonical(source, *, fixture: Path | None = None):
     frame=weather.to_frame(document)
     with connection(maintenance=True) as conn:
         insert=sql.SQL('INSERT INTO {} ({}) VALUES ({}) ON CONFLICT (time) DO NOTHING').format(
-            _canonical_identifier(),_columns_sql(),sql.SQL(', ').join(sql.Placeholder() for _ in COLUMNS))
+            _canonical_identifier(),_columns_sql(source['columns']),
+            sql.SQL(', ').join(sql.Placeholder() for _ in source['columns']))
         data=[tuple(v.to_pydatetime() if isinstance(v,pd.Timestamp) else None if pd.isna(v) else float(v)
-                    for v in row) for row in frame[list(COLUMNS)].itertuples(index=False,name=None)]
+                    for v in row) for row in frame[list(source['columns'])].itertuples(index=False,name=None)]
         with conn.cursor() as cur:
             cur.executemany(insert,data)
             added=cur.rowcount
@@ -375,6 +399,7 @@ def prepare_script(directory: Path):
     from .real import spec, SNAPSHOT
     from .reproducibility import sha256
     conf=spec(directory); number=conf['id']; schema=practice_schema(number)
+    source=conf['source']
     snap=directory/SNAPSHOT
     _,sql=_driver()
     with connection() as conn:
@@ -389,7 +414,7 @@ def prepare_script(directory: Path):
         a,b=_bounds(conf['source'])
         conn.execute(sql.SQL('CREATE SCHEMA {}').format(sql.Identifier(schema)))
         conn.execute(sql.SQL('CREATE TABLE {} AS SELECT {} FROM {} WHERE time >= %s AND time < %s').format(
-            sql.Identifier(schema,TABLE),_columns_sql(),_canonical_identifier()),(a,b))
+            sql.Identifier(schema,TABLE),_columns_sql(source['columns']),_canonical_identifier()),(a,b))
     snap.parent.mkdir(exist_ok=True)
     if not snap.exists(): weather.write_snapshot(doc, snap)
     return schema
@@ -403,24 +428,25 @@ def dirty_script(directory: Path):
     """
     from .real import spec, SNAPSHOT
     conf=spec(directory); number=conf['id']; schema=practice_schema(number)
+    source=conf['source']
     expected=conf.get('reproduction',{}).get('output_sha256')
     _,sql=_driver()
     with connection() as conn:
         _require_safe_practice_role(conn)
         target=sql.Identifier(schema,TABLE)
-        current=_list_rows(conn,target)
+        current=_list_rows(conn,target,conf['source']['columns'])
         if expected and logical_hash(current)==expected:
             return {'status':'already-reproduced','schema':schema}
         document=json.loads((directory/SNAPSHOT).read_text())
         frame=weather.to_frame(weather.validate(document,conf['source']))
         clean_rows=[]
-        for values in frame[list(COLUMNS)].itertuples(index=False,name=None):
+        for values in frame[list(source['columns'])].itertuples(index=False,name=None):
             clean_rows.append(tuple(v.to_pydatetime() if isinstance(v,pd.Timestamp) else
                        None if pd.isna(v) else float(v) for v in values))
         if logical_hash(current)!=logical_hash(sorted(clean_rows, key=lambda r:r[0])):
             raise SQLSetupError(f'{schema}.{TABLE} was modified; refusing to overwrite analyst data')
         details=mutate(conn,schema=schema,number=number,config=conf)
-        new_hash=logical_hash(_list_rows(conn,target))
+        new_hash=logical_hash(_list_rows(conn,target,conf['source']['columns']))
         if expected and new_hash!=expected:
             raise SQLSetupError('SQL reconstruction disagrees with original fingerprint; transaction rolled back')
     return details

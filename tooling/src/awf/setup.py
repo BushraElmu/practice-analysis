@@ -262,9 +262,9 @@ def setup(
         from . import sql_adapter
         capabilities = {name: set(conditions) for name, conditions in CAPABILITIES.items()
                         if ((name != "parquet" or importlib.util.find_spec("pyarrow") is not None)
-                            and (name != "sql" or sql_adapter.available()))}
+                            and (name != "sql" or sql_adapter.available(required_columns=source['columns'])))}
         if fmt == 'sql' and 'sql' not in capabilities:
-            raise SetupError('SQL unavailable: connection missing or unsafe. Check AWF_DATABASE_URL and the restricted practice role (just doctor).')
+            raise SetupError('SQL unavailable: connection missing/unsafe, or canonical is missing one of the configured weather columns. Check AWF_DATABASE_URL, the restricted role, and canonical schema (just doctor).')
         if blind and mode != 'weather':
             raise SetupError('--blind is only available for real-weather practices')
     choice = choose(policy_path, requested_format=fmt, requested_dirty=dirty,
