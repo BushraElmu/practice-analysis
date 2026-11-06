@@ -111,7 +111,9 @@ def main(argv: list[str] | None = None) -> int:
             print('psycopg:', 'installed' if importlib.util.find_spec('psycopg') else 'unavailable')
             print('AWF_DATABASE_URL:', 'configured' if os.environ.get('AWF_DATABASE_URL') else 'not set')
             print('AWF_CANONICAL_DATABASE_URL:', 'configured' if os.environ.get('AWF_CANONICAL_DATABASE_URL') else 'not set')
-            print('SQL random setup:', 'eligible (canonical coverage validated at setup)' if sql_adapter.available() else 'excluded (no safe PostgreSQL connection)')
+            from .source import source_spec
+            required = source_spec(root=root)['columns']
+            print('SQL random setup:', 'eligible (canonical coverage validated at setup)' if sql_adapter.available(required_columns=required) else 'excluded (connection/permissions or configured source columns unavailable)')
             return 0
         if args.command == 'list':
             rows=catalog(root)

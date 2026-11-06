@@ -14,7 +14,7 @@ These are examples of the analytical work produced *using* AWF's practice approa
 
 [![Monthly and daily temperature anomalies relative to historical reference intervals](2026-10-28_historical-temp-anomalies/outputs/temperature-anomalies-monthly-daily-2025.svg)](2026-10-28_historical-temp-anomalies/README.md)
 
-A comparison of 2025 temperature anomolies with 2000–2024 historical references, using monthly percentile intervals and daily deviations. The investigation also handles deliberately invalid source temperatures. [Read the investigation](2026-10-28_historical-temp-anomalies/README.md).
+A comparison of 2025 temperature anomalies with 2000–2024 historical references, using monthly percentile intervals and daily deviations. The investigation also handles deliberately invalid source temperatures. [Read the investigation](2026-10-28_historical-temp-anomalies/README.md).
 
 | [January vs July temperature distributions](2026-10-13_jan-vs-july-avg-temp-distribution/README.md) · Practice 11 | [Solar radiation by cloud-cover band](2026-10-30_solar-radation-by-cloud-cover-band/README.md) · Practice 18 |
 | :--- | :--- |
@@ -50,13 +50,13 @@ A generated practice is an independent `uv` project with its own environment def
 
 | Area | Implemented behavior |
 |---|---|
-| Data interfaces | CSV, JSON, Parquet, or PostgreSQL (with a locally configured database). New exercises use time and currently up to six weather measurements. |
+| Data interfaces | CSV, JSON, Parquet, or PostgreSQL (with a locally configured database). New exercises use hourly time plus ten weather measurements. |
 | Exercise variation | An explicitly chosen or seeded-random format and data condition (including clean data), with supported defect subtypes and field targeting. |
 | Practice workspaces | Numbered directories with an independent uv environment, notebook, preparation scripts, and metadata. |
 | Reproducibility	| Local source snapshots and selection records, and optional blind conditions. |
-| Practice catalog | An index of  practices, with CLI commands to browse and inspect entries. |
+| Practice catalog | An index of historical and linked practices, with CLI commands to browse and inspect entries. |
 
-The current weather generator supplies seven fields (`time` plus six measurements). Some earlier investigations use more of the historical weather dataset than the generator currently exposes. This is a personal, evolving practice system, not a hosted service or a generally validated cross-platform application.
+New practices now include `precipitation`, `snowfall`, `dew_point_2m`, and `surface_pressure` alongside the six existing measurements. The [variable and data-condition reference](docs/weather-variable-conditions.md) explains their units, training anomaly ranges, compatible defect types, and limitations. Earlier practices retain their recorded source layout. This is a personal, evolving practice system, not a hosted service or a generally validated cross-platform application.
 
 ## Getting started
 
@@ -149,9 +149,9 @@ just setup wind-comparison --blind \
   --dirty-vars wind_speed_10m,wind_direction_10m
 ```
 
-The comma-separated values form an **OR** pool: the repo chooses one compatible measurement using a deterministic seed. They do not request two simultaneous corruptions. Without the flag, the original V2.1 targeting remains unchanged. Whole-record conditions (`missing_records`, exact duplicates) act on records, not one chosen field; clean is still selectable under the normal probabilities. Only the six existing numeric weather measurements are supported as targets. Invalid-value ranges are training thresholds, not universal physical limits. The resolved target is private until `just reveal N` when using `--blind`. Source columns are still fixed by the existing seven-column generator; `--dirty-vars` does not add or remove supplied fields.
+The comma-separated values form an **OR** pool: the repo chooses one compatible measurement using a deterministic seed. They do not request two simultaneous corruptions. Without the flag, the original V2.1 targeting remains unchanged. Whole-record conditions (`missing_records`, exact duplicates) act on records, not one chosen field; clean is still selectable under the normal probabilities. All ten numeric weather measurements are eligible as **explicit** targets, including `precipitation`, `snowfall`, `dew_point_2m`, and `surface_pressure`. Their generated invalid-value thresholds and corruption compatibility are documented in the [variable and data-condition reference](docs/weather-variable-conditions.md); these are training parameters, not universal physical limits. The resolved target is private until `just reveal N` when using `--blind`. The new-practice default is eleven columns; `--dirty-vars` does not add or remove source fields. Without `--dirty-vars`, the older default field targeting is unchanged.
 
-The currently supported generated weather fields are `time`, `wind_speed_10m`, `wind_direction_10m`, `temperature_2m`, `cloud_cover`, `relative_humidity_2m`, and `shortwave_radiation`. The original historical canonical database has additional variables; these are not yet exposed by the new generator.
+The default source fields are `time`, `wind_speed_10m`, `wind_direction_10m`, `temperature_2m`, `cloud_cover`, `relative_humidity_2m`, `shortwave_radiation`, `precipitation`, `snowfall`, `dew_point_2m`, and `surface_pressure`. Existing practice manifests pin their original column lists for reconstruction. Future precipitation-composition, snow-event, moisture, and pressure-pattern exercises can use the expanded set.
 
 ### Optional PostgreSQL setup and safety
 
@@ -163,7 +163,7 @@ unset AWF_CANONICAL_DATABASE_URL
 just doctor
 ```
 
-Keep the canonical-maintenance connection unset during normal practice. Do not run `just sql-sync` against the historical source as part of routine setup; the source is already populated. Generated SQL data live in a new `practice_NNN.weather_hourly` schema. SQL setup refuses to overwrite an existing practice schema. `just verify` uses isolated reconstruction and does not reset analyst tables.
+Keep the canonical-maintenance connection unset during normal practice. Do not run `just sql-sync` against the historical source as part of routine setup; the source is already populated. New SQL practices require the four additional fields to exist in `canonical.weather_hourly`. The generator checks for them and excludes SQL from random selection if the table lacks any; it **never** modifies the protected canonical schema. An explicit SQL request with missing columns will be rejected. Generated SQL data live in a new `practice_NNN.weather_hourly` schema. SQL setup refuses to overwrite an existing practice schema. `just verify` uses isolated reconstruction and does not reset analyst tables.
 
 ### Testing and development
 
@@ -173,7 +173,7 @@ After modifying `tooling/src/awf/`, rebuild the non-editable package before runn
 just test-tooling
 ```
 
-The committed tests use isolated temporary directories and do not require live Open-Meteo requests, PostgreSQL access, or private practice records. They are an initial regression baseline, not the full historical acceptance suite.
+The committed tests use isolated temporary directories and do not require live Open-Meteo requests, PostgreSQL access, or private practice records. They cover the core contracts and offline variable/condition tests, but remain a bounded regression baseline rather than the full historical acceptance suite.
 
 The GitHub Actions workflow in [`.github/workflows/ci.yml`](.github/workflows/ci.yml) runs on pull requests to `main`, pushes to `main`, and manual dispatch. On Ubuntu/Python 3.11 it installs the locked non-editable tooling package, runs offline regression tests, builds a wheel, and smoke-tests that wheel outside the source checkout. The regression suite also checks that committed `practices.toml` matches its source manifests.
 

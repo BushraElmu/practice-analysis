@@ -16,8 +16,11 @@ import requests
 
 API = "https://archive-api.open-meteo.com/v1/archive"
 TIMEZONE = "America/Edmonton"
+# Default columns for NEW practices. Existing practices retain their own frozen
+# [source].columns list; adapters must not assume historical manifests used this set.
 COLUMNS = ("time", "wind_speed_10m", "wind_direction_10m", "temperature_2m",
-           "cloud_cover", "relative_humidity_2m", "shortwave_radiation")
+           "cloud_cover", "relative_humidity_2m", "shortwave_radiation",
+           "precipitation", "snowfall", "dew_point_2m", "surface_pressure")
 
 
 def bounds(source: dict) -> tuple[pd.Timestamp, pd.Timestamp]:

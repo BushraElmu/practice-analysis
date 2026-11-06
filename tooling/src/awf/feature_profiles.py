@@ -1,8 +1,7 @@
-"""Supported feature-aware corruption targets for the fixed V2.1 weather source.
+"""Feature-aware corruption profiles for the default weather measurements.
 
-These are *training generation parameters*, not universal physical bounds or
-proof of invalidity.  A feature's measurement semantics determine which generic
-numeric operators can be instantiated.  Source-column expansion is separate.
+These are training-generation parameters, NOT meteorological quality-control
+bounds. Older practice manifests preserve the profile parameters used at setup.
 """
 from __future__ import annotations
 
@@ -32,6 +31,13 @@ PROFILES: dict[str, NumericProfile] = {
     'wind_direction_10m': NumericProfile('circular', '°', 0.0, 360.0, 10.0),
     'cloud_cover': NumericProfile('percentage', '%', 0.0, 100.0, 10.0),
     'shortwave_radiation': NumericProfile('nonnegative', ' W/m²', 0.0, 1600.0, 50.0),
+    # The values below are deliberately broad training-generation thresholds,
+    # NOT verified Calgary extreme-value bounds or an observation QC system.
+    'precipitation': NumericProfile('nonnegative', ' mm', 0.0, 100.0, 10.0, scale_factor=3.0),
+    'snowfall': NumericProfile('nonnegative', ' cm', 0.0, 50.0, 5.0, scale_factor=3.0),
+    'dew_point_2m': NumericProfile('signed', ' °C', -70.0, 50.0, 10.0),
+    'surface_pressure': NumericProfile('positive', ' hPa', 650.0, 1100.0, 50.0,
+                                       conflict_offset=10.0),
 }
 
 if set(PROFILES) != set(MEASUREMENTS):
