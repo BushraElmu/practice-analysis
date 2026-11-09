@@ -216,3 +216,15 @@ featured = false
 linked = true
 origin = "practice.toml"
 path = "2026-11-03_wind-speed-by-direction-2025"
+
+[[practices]]
+id = 20
+title = "Temp By Month And Hour 2025"
+status = "in-progress"
+family = "unclassified"
+format = "csv"
+condition = "undisclosed"
+featured = false
+linked = true
+origin = "practice.toml"
+path = "2026-11-09_temp-by-month-and-hour-2025"
