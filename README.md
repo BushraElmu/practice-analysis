@@ -113,6 +113,7 @@ The repository contains 19 completed analytical investigations as of November 20
 | 18 | [Solar Radiation by Cloud-Cover Band, June 2025](2026-10-30_solar-radation-by-cloud-cover-band/README.md) | CSV |
 | 19 | [Wind Speed by Direction, 2025](2026-11-03_wind-speed-by-direction-2025/README.md) | JSON |
 | 20 | [Average Temperature by Month and Hour, 2025](2026-11-09_temp-by-month-and-hour-2025/README.md) | CSV |
+| 21 | [Concentration of Annual Precipitation, 2025](2026-11-13_precipitation-concentration-2025/README.md) | Parquet |
 
 ## Technical reference
 

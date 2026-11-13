@@ -228,3 +228,15 @@ featured = false
 linked = true
 origin = "practice.toml"
 path = "2026-11-09_temp-by-month-and-hour-2025"
+
+[[practices]]
+id = 21
+title = "Precipitation Concentration 2025"
+status = "in-progress"
+family = "unclassified"
+format = "parquet"
+condition = "undisclosed"
+featured = false
+linked = true
+origin = "practice.toml"
+path = "2026-11-13_precipitation-concentration-2025"
